@@ -1,0 +1,3462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IslamabadGiftShop.pk — Gifts That Express Your Feelings</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ============================================================
+   TOKENS
+   ============================================================ */
+    :root {
+      --obsidian: #080808;
+      --surface-1: #111111;
+      /* slight lift */
+      --surface-2: #161616;
+      /* card */
+      --surface-3: #1C1C1C;
+      /* elevated card */
+      --gold: #C9A84C;
+      --gold-bright: #E4C06E;
+      --gold-dim: #A8862E;
+      --champagne: #E8D5A3;
+      --champ-muted: #C4B08A;
+      --cream: #F5F0E8;
+      --muted: #666666;
+      --border: rgba(201, 168, 76, .18);
+      --border-hi: rgba(201, 168, 76, .45);
+      --fw-display: 'Cormorant Garamond', serif;
+      --fw-ui: 'Montserrat', sans-serif;
+      --fw-label: 'Cinzel', serif;
+      --max: 1280px;
+      --px: clamp(20px, 4vw, 48px);
+      --radius: 0px;
+      /* keep sharp luxury feel */
+    }
+
+    /* ============================================================
+   RESET
+   ============================================================ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
+    body {
+      background: var(--obsidian);
+      color: var(--cream);
+      font-family: var(--fw-ui);
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      max-width: 100vw;
+      width: 100%;
+    }
+
+    img {
+      display: block;
+      max-width: 100%
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      font-family: inherit
+    }
+
+    ul {
+      list-style: none
+    }
+
+    /* ============================================================
+   LAYOUT HELPERS
+   ============================================================ */
+    .wrap {
+      max-width: var(--max);
+      /* margin-inline: auto; */
+      margin: 0 auto;
+      padding-inline: var(--px);
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* ============================================================
+   TYPOGRAPHY HELPERS
+   ============================================================ */
+    .eyebrow {
+      font-family: var(--fw-label);
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .h-display {
+      font-family: var(--fw-display);
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.1;
+    }
+
+    .h-display em {
+      font-style: italic;
+      color: var(--gold)
+    }
+
+    .section-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.85;
+      letter-spacing: .3px;
+      max-width: 520px;
+      margin-inline: auto;
+    }
+
+    /* ============================================================
+   BUTTONS
+   ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-family: var(--fw-label);
+      font-size: 9.5px;
+      letter-spacing: 2.8px;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .28s ease;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--obsidian);
+      padding: 14px 32px;
+      border: none;
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-bright);
+      box-shadow: 0 6px 28px rgba(201, 168, 76, .35)
+    }
+
+    .btn-outline {
+      color: var(--champagne);
+      padding: 13px 32px;
+      border: 1px solid var(--border-hi);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(201, 168, 76, .06)
+    }
+
+    /* ============================================================
+   ORNAMENT DIVIDER  (signature element)
+   ============================================================ */
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .ornament::before,
+    .ornament::after {
+      content: '';
+      height: 1px;
+      flex: 1;
+      max-width: 160px;
+    }
+
+    .ornament::before {
+      background: linear-gradient(90deg, transparent, var(--gold))
+    }
+
+    .ornament::after {
+      background: linear-gradient(270deg, transparent, var(--gold))
+    }
+
+    .ornament-icon {
+      font-size: 13px;
+      color: var(--gold);
+      flex-shrink: 0
+    }
+
+    /* ============================================================
+   SECTION RHYTHM   (alternating BG for visual separation)
+   ============================================================ */
+    /* Layer 0 — pure black */
+    .bg-0 {
+      background: var(--obsidian)
+    }
+
+    /* Layer 1 — subtle surface lift */
+    .bg-1 {
+      background: var(--surface-1)
+    }
+
+    /* Layer 2 — surface with gold glow */
+    .bg-2 {
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 0%, rgba(201, 168, 76, .07) 0%, transparent 70%),
+        var(--surface-1);
+    }
+
+    /* Layer 3 — ruled texture */
+    .bg-ruled {
+      background-color: var(--surface-2);
+      background-image:
+        linear-gradient(rgba(201, 168, 76, .025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201, 168, 76, .025) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* Layer 4 — diagonal stripe */
+    .bg-stripe {
+      background-color: var(--obsidian);
+      background-image: repeating-linear-gradient(135deg,
+          rgba(201, 168, 76, .03) 0px, rgba(201, 168, 76, .03) 1px,
+          transparent 1px, transparent 40px);
+    }
+
+    /* Section top/bottom gold rule accent */
+    .gold-rule-top {
+      border-top: 1px solid var(--border)
+    }
+
+    .gold-rule-bot {
+      border-bottom: 1px solid var(--border)
+    }
+
+    /* ============================================================
+   ANNOUNCEMENT BAR
+   ============================================================ */
+    .ann-bar {
+      background: var(--gold);
+      color: var(--obsidian);
+      text-align: center;
+      padding: 9px var(--px);
+      font-family: var(--fw-label);
+      font-size: 10.5px;
+      letter-spacing: 2.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+
+    .ann-bar::-webkit-scrollbar {
+      display: none
+    }
+
+    .ann-bar span {
+      margin: 0 14px;
+      opacity: .45
+    }
+
+    /* ============================================================
+   HEADER
+   ============================================================ */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 9000;
+      background: rgba(8, 8, 8, .96);
+      backdrop-filter: blur(22px);
+      border-bottom: 1px solid var(--border);
+      width: 100%;
+      /* Font bridges to support pages with different root variable names */
+      --fh-display: var(--fw-display, var(--font-display, 'Cormorant Garamond', serif));
+      --fh-ui: var(--fw-ui, var(--font-ui, 'Montserrat', sans-serif));
+      --fh-label: var(--fw-label, var(--font-label, 'Cinzel', serif));
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      max-width: var(--max);
+      margin-inline: auto;
+      padding-inline: var(--px);
+      gap: 10px;
+    }
+
+    .h-social {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .h-social a {
+      color: var(--muted);
+      transition: color .2s;
+      display: flex
+    }
+
+    .h-social a:hover {
+      color: var(--gold)
+    }
+
+    .h-social svg {
+      width: 13px;
+      height: 13px
+    }
+
+    .logo {
+      flex: 1;
+      text-align: center;
+      cursor: pointer;
+      min-width: 0;
+    }
+
+    .logo-name {
+      font-family: var(--fh-label);
+      font-size: 19px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      display: block;
+      line-height: 1.1
+    }
+
+    .logo-sub {
+      font-family: var(--fh-ui);
+      font-size: 8.5px;
+      letter-spacing: 3.5px;
+      color: var(--champ-muted);
+      text-transform: uppercase;
+      display: block;
+      margin-top: 2px
+    }
+
+    .h-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-shrink: 0;
+    }
+
+    .h-actions a {
+      color: var(--champ-muted);
+      font-size: 12px;
+      transition: color .2s;
+      display: flex;
+      align-items: center;
+      gap: 5px
+    }
+
+    .h-actions a:hover {
+      color: var(--gold)
+    }
+
+    .h-actions svg {
+      width: 15px;
+      height: 15px
+    }
+
+    .cart-wrap {
+      position: relative
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: -7px;
+      right: -8px;
+      background: var(--gold);
+      color: var(--obsidian);
+      font-size: 8px;
+      font-weight: 700;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--fh-label);
+    }
+
+    /* ============================================================
+   MEGA-MENU NAV
+   ============================================================ */
+    .main-nav {
+      border-top: 1px solid var(--border);
+      max-width: var(--max);
+      margin-inline: auto;
+      padding-inline: var(--px);
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .nav-item {
+      position: relative;
+      display: flex;
+      flex-shrink: 0;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 13px 15px;
+      font-family: var(--fh-label);
+      font-size: 9.5px;
+      letter-spacing: 2.2px;
+      color: var(--champ-muted);
+      text-transform: uppercase;
+      transition: color .2s;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--gold);
+      border-bottom-color: var(--gold)
+    }
+
+    .nav-arrow {
+      font-size: 8px;
+      opacity: .6;
+      transition: transform .2s
+    }
+
+    .nav-item:hover .nav-arrow {
+      transform: rotate(180deg)
+    }
+
+    /* MEGA MENU PANEL */
+    .mega {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(6px);
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .22s ease, transform .22s ease;
+      z-index: 8000;
+      min-width: 640px;
+      max-width: min(640px, calc(100vw - 24px));
+    }
+
+    .nav-item:hover .mega {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateX(-50%) translateY(0)
+    }
+
+    /* occasions mega */
+    .mega-occasions {
+      padding: 32px 28px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      align-items: start;
+      gap: 0
+    }
+
+    .mega-col-head {
+      font-family: var(--fh-label);
+      font-size: 8px;
+      letter-spacing: 2.5px;
+      color: var(--gold);
+      text-transform: uppercase;
+      padding: 0 0 14px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 14px;
+    }
+
+    .mega-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 0;
+      font-size: 11px;
+      color: var(--champ-muted);
+      transition: all .18s;
+      border-bottom: 1px solid transparent;
+      letter-spacing: .4px;
+    }
+
+    .mega-link:hover {
+      color: var(--gold);
+      padding-left: 6px
+    }
+
+    .mega-link .ml-emoji {
+      font-size: 15px
+    }
+
+    .mega-divider {
+      width: 1px;
+      background: var(--border);
+      margin: 0 20px;
+      align-self: stretch;
+    }
+
+    /* simple dropdown for other items */
+    .mega-simple {
+      padding: 14px 0;
+      min-width: 200px
+    }
+
+    .mega-simple .mega-link {
+      padding: 9px 20px
+    }
+
+    .mega-simple .mega-link:hover {
+      padding-left: 28px;
+      background: rgba(201, 168, 76, .05)
+    }
+
+    .mega-featured {
+      padding: 28px;
+      background: rgba(201, 168, 76, .04);
+      border-left: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .mega-feat-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border: 1px solid var(--border)
+    }
+
+    .mega-feat-label {
+      font-family: var(--fh-label);
+      font-size: 8.5px;
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 4px
+    }
+
+    .mega-feat-title {
+      font-family: var(--fh-display);
+      font-size: 17px;
+      font-weight: 300;
+      color: var(--cream)
+    }
+
+    .mega-feat-price {
+      font-family: var(--fh-label);
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: 1px;
+      margin-top: 4px
+    }
+
+    /* ============================================================
+   HERO
+   ============================================================ */
+    .hero {
+      position: relative;
+      height: 92vh;
+      min-height: 640px;
+      max-height: 880px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 50% 80% at 20% 60%, rgba(201, 168, 76, .09) 0%, transparent 65%),
+        var(--obsidian);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(201, 168, 76, .03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201, 168, 76, .03) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: radial-gradient(ellipse at 30% 50%, black 0%, transparent 65%);
+    }
+
+    .hero-img-panel {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .hero-img-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: brightness(.6)
+    }
+
+    .hero-img-panel::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(90deg, var(--obsidian) 0%, rgba(8, 8, 8, .3) 45%, transparent 60%);
+    }
+
+    .hero-img-panel::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(8, 8, 8, .2) 0%, transparent 40%, var(--obsidian) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding-left: var(--px);
+      max-width: 50%;
+      width: 100%;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--fw-label);
+      font-size: 9.5px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 36px;
+      height: 1px;
+      background: var(--gold)
+    }
+
+    .hero-h1 {
+      font-family: var(--fw-display);
+      font-size: clamp(40px, 6vw, 78px);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--cream);
+      margin-bottom: 20px
+    }
+
+    .hero-h1 em {
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 400
+    }
+
+    .hero-sub {
+      font-family: var(--fw-display);
+      font-size: clamp(18px, 2.2vw, 30px);
+      font-weight: 300;
+      color: var(--champ-muted);
+      font-style: italic;
+      margin-bottom: 20px
+    }
+
+    .hero-desc {
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 40px;
+      max-width: 400px
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+      color: var(--muted);
+      font-size: 8.5px;
+      letter-spacing: 3px;
+      font-family: var(--fw-label);
+      text-transform: uppercase;
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 44px;
+      background: linear-gradient(180deg, var(--gold) 0%, transparent 100%);
+      animation: sp 2.2s ease-in-out infinite
+    }
+
+    @keyframes sp {
+
+      0%,
+      100% {
+        opacity: .25;
+        transform: scaleY(.8)
+      }
+
+      50% {
+        opacity: 1;
+        transform: scaleY(1.15)
+      }
+    }
+
+    /* hero stats */
+    .hero-stats {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      background: linear-gradient(90deg, rgba(8, 8, 8, .92) 0%, rgba(8, 8, 8, .7) 100%);
+      border-top: 1px solid var(--border);
+      display: none !important;
+    }
+
+    .hero-stats-inner {
+      max-width: var(--max);
+      margin:0 auto;
+      padding-inline: var(--px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+    }
+
+    .h-stat {
+      padding: 18px 40px 18px 0;
+      border-right: 1px solid var(--border);
+      margin-right: 40px;
+      text-align: center;
+    }
+
+    .h-stat:last-child {
+      border-right: none
+    }
+
+    .h-stat-num {
+      font-family: var(--fw-label);
+      font-size: 22px;
+      color: var(--gold);
+      letter-spacing: 2px;
+      display: block;
+      line-height: 1
+    }
+
+    .h-stat-label {
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: .8px;
+      display: block;
+      margin-top: 4px
+    }
+
+    /* ============================================================
+   TRUST STRIP
+   ============================================================ */
+    .trust-strip {
+      background: var(--surface-2);
+      border-bottom: 1px solid var(--border)
+    }
+
+    .trust-inner {
+      max-width: var(--max);
+      margin-inline: auto;
+      padding-inline: var(--px);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 22px 24px;
+      border-right: 1px solid var(--border);
+      min-width: 0;
+    }
+
+    .trust-item:last-child {
+      border-right: none
+    }
+
+    .trust-icon {
+      font-size: 20px;
+      flex-shrink: 0
+    }
+
+    .trust-item h4 {
+      font-family: var(--fw-label);
+      font-size: 9px;
+      letter-spacing: 1.8px;
+      color: var(--champagne);
+      text-transform: uppercase;
+      margin-bottom: 2px
+    }
+
+    .trust-item p {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: .2px
+    }
+
+    /* ============================================================
+   SECTION HEADER  (reusable centered block)
+   ============================================================ */
+    .sec-hd {
+      text-align: center;
+      margin-bottom: 52px
+    }
+
+    .sec-hd .eyebrow {
+      margin-bottom: 10px
+    }
+
+    .sec-hd .h-display {
+      font-size: clamp(34px, 3.8vw, 52px);
+      margin-bottom: 16px
+    }
+
+    .sec-hd .section-desc {
+      margin-bottom: 0
+    }
+
+    .ornament-row {
+      margin: 16px auto 0;
+      display: flex;
+      justify-content: center
+    }
+
+    /* ============================================================
+   OCCASIONS STRIP
+   ============================================================ */
+    .occasions-wrap {
+      overflow: hidden
+    }
+
+    .occasions-track {
+      display: flex;
+      gap: 16px;
+      padding: 0 var(--px) 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 0;
+    }
+
+    .occasions-track::-webkit-scrollbar {
+      display: none
+    }
+
+    .occ-card {
+      width: clamp(140px, 12vw, 175px);
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      height: 220px;
+    }
+
+    .occ-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s ease;
+      filter: brightness(.65)
+    }
+
+    .occ-card:hover img {
+      transform: scale(1.08);
+      filter: brightness(.82)
+    }
+
+    .occ-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 35%, rgba(0, 0, 0, .82) 100%)
+    }
+
+    .occ-border {
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(201, 168, 76, 0);
+      z-index: 2;
+      pointer-events: none;
+      transition: border-color .35s
+    }
+
+    .occ-card:hover .occ-border {
+      border-color: rgba(201, 168, 76, .5)
+    }
+
+    .occ-info {
+      position: absolute;
+      bottom: 16px;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      text-align: center;
+      padding: 0 8px
+    }
+
+    .occ-name {
+      font-family: var(--fw-label);
+      font-size: 9px;
+      letter-spacing: 2.2px;
+      color: var(--cream);
+      text-transform: uppercase;
+      transition: color .2s
+    }
+
+    .occ-card:hover .occ-name {
+      color: var(--gold)
+    }
+
+    /* ============================================================
+   PRODUCTS GRID
+   ============================================================ */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3px
+    }
+
+    @media(max-width:900px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media(max-width:520px) {
+      .products-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .pcard {
+      position: relative;
+      background: var(--surface-2);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer
+    }
+
+    .pcard-img {
+      position: relative;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      background: var(--surface-3);
+      flex-shrink: 0
+    }
+
+    .pcard-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s cubic-bezier(.25, .46, .45, .94)
+    }
+
+    .pcard:hover .pcard-img img {
+      transform: scale(1.07)
+    }
+
+    .pcard-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 2;
+      background: var(--gold);
+      color: var(--obsidian);
+      font-family: var(--fw-label);
+      font-size: 7.5px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      font-weight: 700;
+    }
+
+    .pcard-badge.outline {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold)
+    }
+
+    .pcard-wish {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 4;
+      width: 34px;
+      height: 34px;
+      background: rgba(8, 8, 8, .72);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s;
+      cursor: pointer;
+    }
+
+    .pcard-wish:hover {
+      border-color: var(--gold);
+      background: rgba(201, 168, 76, .12)
+    }
+
+    .pcard-wish svg {
+      width: 13px;
+      height: 13px;
+      stroke: var(--champ-muted);
+      fill: none;
+      stroke-width: 1.5;
+      transition: stroke .2s
+    }
+
+    .pcard-wish:hover svg {
+      stroke: var(--gold)
+    }
+
+    .pcard-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 20px;
+      background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, .72) 100%);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .pcard:hover .pcard-overlay {
+      opacity: 1
+    }
+
+    .pcard-quick {
+      background: var(--gold);
+      color: var(--obsidian);
+      padding: 11px 26px;
+      font-family: var(--fw-label);
+      font-size: 8.5px;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transform: translateY(8px);
+      transition: transform .28s ease;
+    }
+
+    .pcard:hover .pcard-quick {
+      transform: translateY(0)
+    }
+
+    .pcard-body {
+      padding: 18px 18px 22px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .pcard-coll {
+      font-family: var(--fw-label);
+      font-size: 7.5px;
+      letter-spacing: 2.5px;
+      color: var(--gold);
+      text-transform: uppercase
+    }
+
+    .pcard-name {
+      font-family: var(--fw-display);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--champagne);
+      line-height: 1.3;
+      flex: 1
+    }
+
+    .pcard-price-row {
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .pcard-price {
+      font-family: var(--fw-label);
+      font-size: 13px;
+      color: var(--gold);
+      letter-spacing: .8px
+    }
+
+    .pcard-old {
+      font-size: 11px;
+      color: var(--muted);
+      text-decoration: line-through
+    }
+
+    /* ============================================================
+   TABBED PRODUCTS  (working tabs)
+   ============================================================ */
+    .tab-bar {
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .tab-bar::-webkit-scrollbar {
+      display: none
+    }
+
+    .tab-btn {
+      padding: 13px 22px;
+      font-family: var(--fw-label);
+      font-size: 8.5px;
+      letter-spacing: 2.2px;
+      color: var(--muted);
+      text-transform: uppercase;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color .2s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform .22s;
+    }
+
+    .tab-btn.active {
+      color: var(--gold)
+    }
+
+    .tab-btn.active::after,
+    .tab-btn:hover::after {
+      transform: scaleX(1)
+    }
+
+    .tab-btn:hover {
+      color: var(--champ-muted)
+    }
+
+    .tab-panel {
+      display: none
+    }
+
+    .tab-panel.active {
+      display: block
+    }
+
+    /* ============================================================
+   CATEGORY SHOWCASE  (fixed layout — 3 left + 3 right)
+   ============================================================ */
+    .cat-showcase {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 3px;
+      height: clamp(460px, 55vw, 680px);
+    }
+
+    .cat-tile {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      display: block
+    }
+
+    .cat-tile.span-col {
+      grid-column: span 1;
+      grid-row: span 2
+    }
+
+    .cat-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .65s ease, filter .4s;
+      filter: brightness(.65)
+    }
+
+    .cat-tile:hover img {
+      transform: scale(1.06);
+      filter: brightness(.82)
+    }
+
+    .cat-tile::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(170deg, transparent 40%, rgba(0, 0, 0, .78) 100%)
+    }
+
+    .cat-border {
+      position: absolute;
+      inset: 7px;
+      border: 1px solid rgba(201, 168, 76, 0);
+      z-index: 3;
+      pointer-events: none;
+      transition: border-color .35s
+    }
+
+    .cat-tile:hover .cat-border {
+      border-color: rgba(201, 168, 76, .45)
+    }
+
+    .cat-body {
+      position: absolute;
+      bottom: 22px;
+      left: 22px;
+      right: 22px;
+      z-index: 4
+    }
+
+    .cat-label {
+      font-family: var(--fw-label);
+      font-size: 8px;
+      letter-spacing: 2.8px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 5px
+    }
+
+    .cat-name {
+      font-family: var(--fw-display);
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.1
+    }
+
+    .cat-tile.span-col .cat-name {
+      font-size: clamp(26px, 3vw, 40px)
+    }
+
+    .cat-tile:not(.span-col) .cat-name {
+      font-size: clamp(18px, 2vw, 26px)
+    }
+
+    /* ============================================================
+   FEATURED WIDE
+   ============================================================ */
+    .feat-wide {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--border);
+      overflow: hidden
+    }
+
+    .feat-img {
+      position: relative;
+      min-height: 460px;
+      overflow: hidden
+    }
+
+    .feat-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(.8)
+    }
+
+    .feat-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 55%, var(--surface-2) 100%)
+    }
+
+    .feat-body {
+      padding: clamp(32px, 5vw, 64px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0;
+      background: var(--surface-2)
+    }
+
+    .feat-body .eyebrow {
+      margin-bottom: 10px
+    }
+
+    .feat-title {
+      font-family: var(--fw-display);
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 300;
+      color: var(--cream);
+      margin-bottom: 14px;
+      line-height: 1.25
+    }
+
+    .feat-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 24px
+    }
+
+    .feat-price {
+      font-family: var(--fw-label);
+      font-size: 22px;
+      color: var(--gold);
+      letter-spacing: 2px;
+      margin-bottom: 28px
+    }
+
+    .feat-ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    /* ============================================================
+   HOW IT WORKS
+   ============================================================ */
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px
+    }
+
+    @media(max-width:800px) {
+      .how-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    .how-step {
+      padding: clamp(28px, 4vw, 48px) clamp(20px, 3vw, 36px);
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: background .3s;
+    }
+
+    .how-step:hover {
+      background: var(--surface-3)
+    }
+
+    .how-step::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .how-step:hover::before {
+      opacity: 1
+    }
+
+    .how-num-bg {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-family: var(--fw-display);
+      font-size: 80px;
+      font-weight: 300;
+      font-style: italic;
+      color: rgb(201 168 76 / 85%);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .how-icon {
+      font-size: 28px;
+      margin-bottom: 18px;
+      display: block
+    }
+
+    .how-step h3 {
+      font-family: var(--fw-label);
+      font-size: 9.5px;
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 10px
+    }
+
+    .how-step p {
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.75
+    }
+
+    /* ============================================================
+   DELIVERY SECTION
+   ============================================================ */
+    .delivery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: var(--max);
+      margin-inline: auto;
+    }
+
+    @media(max-width:700px) {
+      .delivery-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    .del-city {
+      padding: clamp(28px, 4vw, 44px) clamp(16px, 2.5vw, 28px);
+      border-right: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .del-city:last-child {
+      border-right: none
+    }
+
+    .del-icon {
+      font-size: 28px;
+      margin-bottom: 14px;
+      display: block
+    }
+
+    .del-hub {
+      display: inline-block;
+      font-family: var(--fw-label);
+      font-size: 7.5px;
+      letter-spacing: 1.8px;
+      color: var(--champ-muted);
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      padding: 3px 10px;
+      margin-bottom: 12px
+    }
+
+    .del-city h3 {
+      font-family: var(--fw-label);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 10px
+    }
+
+    .del-city p {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.8
+    }
+
+    /* ============================================================
+   TESTIMONIAL SLIDER  (now 3-per-slide, responsive)
+   ============================================================ */
+    .testimonial-slider {
+      position: relative;
+      overflow: hidden;
+      max-width: var(--max);
+      margin-inline: auto;
+      padding-inline: var(--px);
+    }
+
+    .testimonial-track {
+      display: flex;
+      transition: transform .5s cubic-bezier(.25, .46, .45, .94);
+    }
+
+    /* Each "page" holds 3 cards on desktop */
+    .testimonial-page {
+      width: 100%;
+      flex: 0 0 100%;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      box-sizing: border-box;
+    }
+
+    @media(max-width:980px) {
+      .testimonial-page {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+    }
+
+    @media(max-width:640px) {
+      .testimonial-page {
+        grid-template-columns: minmax(0, 1fr)
+      }
+    }
+
+    .testi-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      padding: clamp(28px, 3.5vw, 40px) clamp(22px, 3vw, 32px);
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .testi-quote-mark {
+      font-family: var(--fw-display);
+      font-size: 64px;
+      color: rgba(201, 168, 76, .18);
+      line-height: 1;
+      font-style: italic;
+      margin-bottom: -10px;
+    }
+
+    .testi-stars {
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 2px;
+      margin-bottom: 14px
+    }
+
+    .testi-text {
+      font-family: var(--fw-display);
+      font-size: clamp(15px, 1.6vw, 17px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--champagne);
+      line-height: 1.6;
+      margin-bottom: 22px;
+      flex: 1;
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+
+    .tav {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--fw-label);
+      font-size: 13px;
+      color: var(--gold);
+      flex-shrink: 0
+    }
+
+    .tav-info {
+      min-width: 0;
+    }
+
+    .tav-info h4 {
+      font-family: var(--fw-label);
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      color: var(--champagne);
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .tav-info span {
+      font-size: 11px;
+      color: var(--muted)
+    }
+
+    .slider-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding: 32px 0 40px
+    }
+
+    .slider-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--border-hi);
+      cursor: pointer;
+      transition: all .2s
+    }
+
+    .slider-dot.active {
+      background: var(--gold);
+      transform: scale(1.4)
+    }
+
+    .slider-arrow {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--champ-muted);
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s;
+      flex-shrink: 0;
+    }
+
+    .slider-arrow:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(201, 168, 76, .06)
+    }
+
+    /* ============================================================
+   NEWSLETTER
+   ============================================================ */
+    .nl-section {
+      padding: clamp(60px, 8vw, 110px) var(--px);
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .nl-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(201, 168, 76, .09) 0%, transparent 70%);
+    }
+
+    .nl-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 500px;
+      margin-inline: auto
+    }
+
+    .nl-row {
+      display: flex;
+      margin-top: 32px;
+      border: 1px solid var(--border-hi);
+      flex-wrap: wrap;
+    }
+
+    .nl-input {
+      flex: 1;
+      min-width: 0;
+      background: transparent;
+      border: none;
+      padding: 15px 18px;
+      color: var(--cream);
+      font-family: var(--fw-ui);
+      font-size: 13px;
+      outline: none;
+      letter-spacing: .3px;
+    }
+
+    .nl-input::placeholder {
+      color: var(--muted);
+      font-style: italic
+    }
+
+    .nl-btn {
+      background: var(--gold);
+      color: var(--obsidian);
+      padding: 15px 26px;
+      font-family: var(--fw-label);
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .2s;
+      text-transform: uppercase;
+    }
+
+    .nl-btn:hover {
+      background: var(--gold-bright)
+    }
+
+    .nl-note {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 12px;
+      font-style: italic
+    }
+
+    /* ============================================================
+   FOOTER
+   ============================================================ */
+    .site-footer {
+      background: #0C0C0C;
+      border-top: 1px solid var(--border)
+    }
+
+    .footer-top {
+      max-width: var(--max);
+      margin-inline: auto;
+      padding: clamp(48px, 7vw, 80px) var(--px) clamp(36px, 5vw, 60px);
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1.4fr;
+      gap: clamp(24px, 4vw, 60px);
+    }
+
+    @media(max-width:820px) {
+      .footer-top {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media(max-width:480px) {
+      .footer-top {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .f-brand .logo-name {
+      font-size: 16px;
+      margin-bottom: 4px;
+      display: block
+    }
+
+    .f-brand .logo-sub {
+      display: block;
+      margin-bottom: 18px
+    }
+
+    .f-brand p {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.9;
+      max-width: 260px;
+      margin-bottom: 22px
+    }
+
+    .f-social {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+    }
+
+    .f-social a {
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 11px;
+      transition: all .2s;
+    }
+
+    .f-social a:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(201, 168, 76, .07)
+    }
+
+    .f-col h4 {
+      font-family: var(--fw-label);
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .f-col li {
+      margin-bottom: 9px
+    }
+
+    .f-col a {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: .3px;
+      transition: color .18s;
+      display: flex;
+      align-items: center;
+      gap: 7px
+    }
+
+    .f-col a::before {
+      content: '—';
+      font-size: 9px;
+      color: var(--border-hi)
+    }
+
+    .f-col a:hover {
+      color: var(--champagne)
+    }
+
+    .f-del p {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 10px
+    }
+
+    .f-del .hub {
+      font-family: var(--fw-label);
+      font-size: 8.5px;
+      letter-spacing: 1.5px;
+      color: var(--champ-muted);
+      text-transform: uppercase
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding: 18px var(--px);
+      max-width: var(--max);
+      margin-inline: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-bottom p {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: .3px
+    }
+
+    .pay-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap
+    }
+
+    .pay-b {
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      padding: 4px 11px;
+      font-family: var(--fw-label);
+      font-size: 8.5px;
+      letter-spacing: 1px;
+      color: var(--champ-muted);
+      text-transform: uppercase;
+    }
+
+    /* WHATSAPP FLOAT */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 8999;
+      width: 54px;
+      height: 54px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 22px rgba(37, 211, 102, .45);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .wa-float:hover {
+      transform: scale(1.09);
+      box-shadow: 0 8px 30px rgba(37, 211, 102, .55)
+    }
+
+    .wa-float svg {
+      width: 27px;
+      height: 27px;
+      fill: #fff
+    }
+
+    /* ============================================================
+   RESPONSIVE
+   ============================================================ */
+    @media(max-width:1024px) {
+      .trust-inner {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .trust-item:nth-child(2) {
+        border-right: none
+      }
+
+      .trust-item:nth-child(3) {
+        border-right: 1px solid var(--border);
+        border-top: 1px solid var(--border)
+      }
+
+      .trust-item:nth-child(4) {
+        border-top: 1px solid var(--border);
+        border-right: none
+      }
+
+      .feat-wide {
+        grid-template-columns: 1fr
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .how-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .delivery-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .del-city:nth-child(2) {
+        border-right: none
+      }
+
+      .del-city:nth-child(3) {
+        border-top: 1px solid var(--border);
+        border-right: 1px solid var(--border)
+      }
+
+      .del-city:nth-child(4) {
+        border-top: 1px solid var(--border);
+        border-right: none
+      }
+    }
+
+    @media(max-width:900px) {
+      .hero {
+        height: auto;
+        min-height: auto;
+        max-height: none;
+        padding: 120px 0 60px;
+      }
+
+      .hero-img-panel {
+        width: 100%;
+        opacity: .25;
+      }
+
+      .hero-content {
+        max-width: 100%;
+        padding: 0 var(--px);
+      }
+
+      .hero-desc {
+        max-width: 100%
+      }
+    }
+
+    @media(max-width:768px) {
+      .hero-img-panel {
+        width: 100%;
+        opacity: .25
+      }
+
+      .hero-content {
+        max-width: 100%;
+        padding: 0 var(--px)
+      }
+
+      .hero-stats {
+        display: none
+      }
+
+      .header-top {
+        height: auto;
+        min-height: 60px;
+        padding-block: 10px;
+        flex-wrap: wrap;
+      }
+
+      .h-social {
+        order: 2;
+      }
+
+      .logo {
+        order: 1;
+        flex: 1 1 100%;
+        margin-bottom: 6px;
+      }
+
+      .h-actions {
+        order: 3;
+      }
+
+      .main-nav {
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        justify-content: flex-start
+      }
+
+      .main-nav::-webkit-scrollbar {
+        display: none
+      }
+
+      .cat-showcase {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        height: auto
+      }
+
+      .cat-tile.span-col {
+        grid-column: span 2;
+        grid-row: span 1;
+        height: 300px
+      }
+
+      .cat-tile:not(.span-col) {
+        height: 200px
+      }
+
+      .mega {
+        position: fixed;
+        top: auto;
+        min-width: 0;
+        max-width: 100vw;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transform: translateY(8px);
+        max-height: 70vh;
+        overflow-y: auto;
+      }
+
+      .nav-item:hover .mega {
+        transform: translateY(0)
+      }
+
+      .mega-occasions {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .mega-occasions .mega-divider {
+        display: none
+      }
+
+      .mega-featured {
+        grid-column: span 2;
+        border-left: none;
+        border-top: 1px solid var(--border);
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(max-width:480px) {
+      .trust-inner {
+        grid-template-columns: 1fr
+      }
+
+      .trust-item {
+        border-right: none;
+        border-bottom: 1px solid var(--border)
+      }
+
+      .trust-item:last-child {
+        border-bottom: none
+      }
+
+      .hero-h1 {
+        font-size: clamp(32px, 11vw, 42px);
+      }
+
+      .hero-eyebrow {
+        font-size: 8.5px;
+        letter-spacing: 2.5px;
+      }
+
+      .hero-ctas {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-ctas .btn {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1px
+      }
+
+      .how-grid {
+        grid-template-columns: 1fr
+      }
+
+      .delivery-grid {
+        grid-template-columns: 1fr
+      }
+
+      .del-city {
+        border-right: none;
+        border-bottom: 1px solid var(--border)
+      }
+
+      .nl-row {
+        flex-direction: column;
+        border: none;
+        gap: 10px;
+      }
+
+      .nl-input {
+        border: 1px solid var(--border-hi);
+        padding: 14px 16px;
+      }
+
+      .nl-btn {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .ann-bar {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+      }
+    }
+
+    /* ============================================================
+   SCROLL REVEAL (lightweight)
+   ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .6s ease, transform .6s ease
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    .reveal-delay-1 {
+      transition-delay: .1s
+    }
+
+    .reveal-delay-2 {
+      transition-delay: .2s
+    }
+
+    .reveal-delay-3 {
+      transition-delay: .3s
+    }
+
+    .reveal-delay-4 {
+      transition-delay: .4s
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="ann-bar">
+    ⚡ Same-Day Delivery Available<span>|</span>Trusted by Overseas Pakistanis — USA · UK · Canada<span>|</span>WhatsApp:
+    0332-6362390
+  </div>
+
+  <!-- ============================================================
+     HEADER + MEGA MENU NAV
+     ============================================================ -->
+  <header class="site-header">
+    <div class="header-top">
+
+      <!-- Social -->
+      <div class="h-social">
+        <a href="https://www.facebook.com/share/16unJ8ZTiF/" title="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/islamabadgiftshop.pk" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+        </a>
+        <a href="https://youtube.com/@islamabadgiftshop" title="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z" />
+            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#080808" />
+          </svg>
+        </a>
+        <a href="https://wa.me/923326362390" title="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Logo -->
+      <a class="logo" href="IGS_Homepage_v2.html">
+        <span class="logo-name">ISLAMABAD GIFTSHOP.PK</span>
+        <span class="logo-sub">Gifts That Express Your Feelings</span>
+      </a>
+
+      <!-- Actions -->
+      <div class="h-actions">
+        <a href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.35-4.35" />
+          </svg>
+        </a>
+        <a href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <span style="font-family:var(--fw-label);font-size:9px;letter-spacing:1px">Account</span>
+        </a>
+        <a href="#" class="cart-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 01-8 0" />
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- MEGA NAV -->
+    <nav class="main-nav">
+
+      <!-- HOME DROPDOWN -->
+      <div class="nav-item">
+        <a class="nav-link active" href="IGS_Homepage_v2.html">Home <span class="nav-arrow">▾</span></a>
+        <div class="mega mega-simple">
+          <a class="mega-link" href="IGS_Homepage_v2.html">Home (Version 2)</a>
+          <a class="mega-link" href="IGS_Homepage.html">Home (Version 1)</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link" href="https://islamabadgiftshop.pk/collections/flowers">Flowers</a>
+      </div>
+
+      <!-- OCCASIONS MEGA MENU -->
+      <div class="nav-item">
+        <a class="nav-link" href="#">Occasions <span class="nav-arrow">▾</span></a>
+        <div class="mega mega-occasions">
+          <!-- col 1 -->
+          <div>
+            <div class="mega-col-head">Celebrations</div>
+            <a class="mega-link" href="https://islamabadgiftshop.pk/collections/anniversary"><span
+                class="ml-emoji">💝</span>Anniversary</a>
+            <a class="mega-link" href="https://islamabadgiftshop.pk/collections/birthday-gifts"><span
+                class="ml-emoji">🎂</span>Birthday</a>
+            <a class="mega-link" href="https://islamabadgiftshop.pk/collections/graduation"><span
+                class="ml-emoji">🎓</span>Graduation</a>
+            <a class="mega-link" href="https://islamabadgiftshop.pk/collections/congratulations"><span
+                class="ml-emoji">🎉</span>Congratulations</a>
+            <a class="mega-link" href="https://islamabadgiftshop.pk/collections/wedding"><span
+                class="ml-emoji">💒</span>Wedding</a>
+          </div>
+          <div class="mega-divider"></div>
+          <!-- col 2 -->
+          <div>
+            <div class="mega-col-head">Sentiments</div>
+            <a class="mega-link" href="https://islamabadgiftshop.pk/collections/mothers-day"><span
+                class="ml-emoji">🌸</span>Mother's Day</a>
+            <a class="mega-link" href="https://islamabadgiftshop.pk/collections/get-well-soon"><span
+                class="ml-emoji">💊</span>Get Well Soon</a>
+            <a class="mega-link" href="https://islamabadgiftshop.pk/collections/sorry"><span
+                class="ml-emoji">🙏</span>Sorry</a>
+            <a class="mega-link" href="https://islamabadgiftshop.pk/collections/its-a-boy"><span
+                class="ml-emoji">👶</span>It's a Boy</a>
+            <a class="mega-link" href="https://islamabadgiftshop.pk/collections/its-a-girl"><span
+                class="ml-emoji">👧</span>It's a Girl</a>
+          </div>
+          <div class="mega-divider"></div>
+          <!-- col 3 featured -->
+          <div class="mega-featured">
+            <img class="mega-feat-img"
+              src="https://islamabadgiftshop.pk/cdn/shop/files/vv17_ed54ad3e-c0ef-4ab1-a0e5-1ecbe1455147.jpg?v=1766068156"
+              alt="Featured">
+            <div>
+              <div class="mega-feat-label">Most Loved</div>
+              <div class="mega-feat-title">Premium Red Roses Bouquet</div>
+              <div class="mega-feat-price">Rs. 10,500</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link" href="https://islamabadgiftshop.pk/collections/cakes">Cakes</a>
+      </div>
+
+      <!-- PREMIUM MEGA -->
+      <div class="nav-item">
+        <a class="nav-link active" href="https://islamabadgiftshop.pk/collections/luxury-flowers">Premium <span
+            class="nav-arrow">▾</span></a>
+        <div class="mega mega-simple">
+          <a class="mega-link" href="https://islamabadgiftshop.pk/collections/luxury-flowers">Luxury Flowers</a>
+          <a class="mega-link" href="https://islamabadgiftshop.pk/collections/money-bouquet">Money Bouquets</a>
+          <a class="mega-link" href="https://islamabadgiftshop.pk/collections/flower-boxes">Flower Boxes</a>
+          <a class="mega-link" href="https://islamabadgiftshop.pk/collections/baskets">Gift Baskets</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link" href="https://islamabadgiftshop.pk/collections/combos">Gift Sets</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="https://islamabadgiftshop.pk/collections/teddy-bear">Teddy Bears</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="https://islamabadgiftshop.pk/collections/eid-gifts-1">Eid Gifts</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="https://islamabadgiftshop.pk/collections/customized">Customize</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="https://islamabadgiftshop.pk/collections/affordable-deals">Affordable</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="IGS_Contact.html">Contact</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="IGS_Collection.html">Collections</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="IGS_About.html">About</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="IGS_FAQ.html">FAQs</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="IGS_Policy.html">Policy</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <!-- ============================================================
+     SECTION 1 · HERO  (bg: obsidian)
+     ============================================================ -->
+  <section class="hero bg-0">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-img-panel">
+      <img src="https://islamabadgiftshop.pk/cdn/shop/files/new_37.png?v=1756061267" alt="Premium Luxury Gift">
+    </div>
+    <div class="hero-content wrap]" style="padding-top:0;padding-bottom:80px">
+      <div class="hero-eyebrow">Pakistan's Premier Luxury Gifting Brand</div>
+      <h1 class="hero-h1">Gifts That<br><em>Express</em><br>Your Feelings</h1>
+      <p class="hero-sub">Crafted with love. Delivered same day.</p>
+      <p class="hero-desc">Trusted by overseas Pakistanis from USA, UK & Canada. Luxury flowers, cakes & premium gifts
+        delivered to Islamabad, Rawalpindi & across Pakistan.</p>
+      <div class="hero-ctas">
+        <a href="https://islamabadgiftshop.pk/collections/luxury-flowers" class="btn btn-gold">
+          Shop Now
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="customize.html" class="btn btn-outline">Build a Bundle</a>
+      </div>
+    </div>
+    <!-- Stats bar -->
+    <div class="hero-stats">
+      <div class="hero-stats-inner">
+        <div class="h-stat"><span class="h-stat-num">500+</span><span class="h-stat-label">Luxury Gift Options</span>
+        </div>
+        <div class="h-stat"><span class="h-stat-num">10K+</span><span class="h-stat-label">Happy Customers</span></div>
+        <div class="h-stat"><span class="h-stat-num">4+</span><span class="h-stat-label">City Delivery Hubs</span></div>
+        <div class="h-stat"><span class="h-stat-num">24/7</span><span class="h-stat-label">WhatsApp Support</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+     SECTION 2 · TRUST STRIP  (bg: surface-2)
+     ============================================================ -->
+  <div class="trust-strip">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <span class="trust-icon">⚡</span>
+        <div>
+          <h4>Same-Day Delivery</h4>
+          <p>Order before 4 PM, arrive today</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🌍</span>
+        <div>
+          <h4>International Orders</h4>
+          <p>Send from USA, UK, Canada & UAE</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">✦</span>
+        <div>
+          <h4>500+ Luxury Options</h4>
+          <p>Curated premium gift collections</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🔒</span>
+        <div>
+          <h4>Trusted & Secure</h4>
+          <p>10,000+ orders successfully delivered</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+     SECTION 3 · SHOP BY OCCASION  (bg: ruled texture)
+     ============================================================ -->
+  <section class="bg-ruled gold-rule-top" style="padding:clamp(48px,7vw,88px) 0">
+    <div class="wrap">
+      <div class="sec-hd reveal">
+        <span class="eyebrow">Find Your Gift</span>
+        <h2 class="h-display" style="font-size:clamp(34px,3.8vw,52px)">Shop by <em>Occasion</em></h2>
+        <p class="section-desc">Every celebration deserves a perfectly curated gift. Browse by what matters most to you.
+        </p>
+        <div class="ornament-row">
+          <div class="ornament"><span class="ornament-icon">✦</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="occasions-wrap">
+      <div class="occasions-track" style="padding:0 var(--px)">
+        <a href="https://islamabadgiftshop.pk/collections/anniversary" class="occ-card" style="text-decoration:none">
+          <img
+            src="https://islamabadgiftshop.pk/cdn/shop/files/b50_d33a759b-c29f-4225-a6ce-16b932034d80.webp?v=1736151525"
+            alt="Anniversary">
+          <div class="occ-border"></div>
+          <div class="occ-info"><span class="occ-name">Anniversary</span></div>
+        </a>
+        <a href="https://islamabadgiftshop.pk/collections/birthday-gifts" class="occ-card" style="text-decoration:none">
+          <img src="https://islamabadgiftshop.pk/cdn/shop/files/valentine.jpg?v=1766064152" alt="Birthday">
+          <div class="occ-border"></div>
+          <div class="occ-info"><span class="occ-name">Birthday</span></div>
+        </a>
+        <a href="https://islamabadgiftshop.pk/collections/wedding" class="occ-card" style="text-decoration:none">
+          <img
+            src="https://islamabadgiftshop.pk/cdn/shop/files/gempages_517841228537070667-cc0f8f87-a405-4f09-8c99-c43d974fa4bd.jpg?v=1719836988"
+            alt="Wedding">
+          <div class="occ-border"></div>
+          <div class="occ-info"><span class="occ-name">Wedding</span></div>
+        </a>
+        <a href="https://islamabadgiftshop.pk/collections/mothers-day" class="occ-card" style="text-decoration:none">
+          <img
+            src="https://islamabadgiftshop.pk/cdn/shop/files/eid_800x1080px_700x800px_550x600px_400x450px_2.png?v=1745693065"
+            alt="Mother's Day">
+          <div class="occ-border"></div>
+          <div class="occ-info"><span class="occ-name">Mother's Day</span></div>
+        </a>
+        <a href="https://islamabadgiftshop.pk/collections/graduation" class="occ-card" style="text-decoration:none">
+          <img src="https://islamabadgiftshop.pk/cdn/shop/files/new_29.png?v=1756060379" alt="Graduation">
+          <div class="occ-border"></div>
+          <div class="occ-info"><span class="occ-name">Graduation</span></div>
+        </a>
+        <a href="https://islamabadgiftshop.pk/collections/get-well-soon" class="occ-card" style="text-decoration:none">
+          <img src="https://islamabadgiftshop.pk/cdn/shop/files/ramadan_55.png?v=1740904297" alt="Get Well Soon">
+          <div class="occ-border"></div>
+          <div class="occ-info"><span class="occ-name">Get Well Soon</span></div>
+        </a>
+        <a href="https://islamabadgiftshop.pk/collections/its-a-boy" class="occ-card" style="text-decoration:none">
+          <img src="https://islamabadgiftshop.pk/cdn/shop/files/b191.webp?v=1736431314" alt="It's a Boy">
+          <div class="occ-border"></div>
+          <div class="occ-info"><span class="occ-name">It's a Boy</span></div>
+        </a>
+        <a href="https://islamabadgiftshop.pk/collections/congratulations" class="occ-card"
+          style="text-decoration:none">
+          <img src="https://islamabadgiftshop.pk/cdn/shop/files/new_10.png?v=1756030139" alt="Congratulations">
+          <div class="occ-border"></div>
+          <div class="occ-info"><span class="occ-name">Congratulations</span></div>
+        </a>
+        <a href="https://islamabadgiftshop.pk/collections/eid-gifts-1" class="occ-card" style="text-decoration:none">
+          <img src="https://islamabadgiftshop.pk/cdn/shop/files/eidgifts.png?v=1741282155" alt="Eid Gifts">
+          <div class="occ-border"></div>
+          <div class="occ-info"><span class="occ-name">Eid Gifts</span></div>
+        </a>
+        <a href="https://islamabadgiftshop.pk/collections/sorry" class="occ-card" style="text-decoration:none">
+          <img src="https://islamabadgiftshop.pk/cdn/shop/files/affordable_49.png?v=1739885581" alt="Sorry">
+          <div class="occ-border"></div>
+          <div class="occ-info"><span class="occ-name">Say Sorry</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+     SECTION 4 · FEATURED PRODUCTS (bg: stripe — visual contrast)
+     ============================================================ -->
+  <section class="bg-stripe gold-rule-top" style="padding:clamp(56px,7vw,96px) 0">
+    <div class="wrap">
+      <div class="sec-hd reveal">
+        <span class="eyebrow">Our Finest Selection</span>
+        <h2 class="h-display" style="font-size:clamp(34px,3.8vw,52px)">Featured <em>Gifts</em></h2>
+        <p class="section-desc">Handpicked by our gifting specialists — the most-loved, most-ordered pieces from our
+          collection.</p>
+        <div class="ornament-row">
+          <div class="ornament"><span class="ornament-icon">✦</span></div>
+        </div>
+      </div>
+
+      <!-- TAB NAV -->
+      <div class="tab-bar" id="productTabBar">
+        <button class="tab-btn active" data-tab="all">All</button>
+        <button class="tab-btn" data-tab="flowers">Flowers</button>
+        <button class="tab-btn" data-tab="cakes">Cakes</button>
+        <button class="tab-btn" data-tab="combos">Gift Sets</button>
+        <button class="tab-btn" data-tab="teddies">Teddy Bears</button>
+        <button class="tab-btn" data-tab="premium">Premium</button>
+      </div>
+
+      <!-- TAB PANELS (each its own grid) -->
+      <div class="tab-panel active" id="panel-all">
+        <div class="products-grid">
+          <!-- 1 -->
+          <a href="https://islamabadgiftshop.pk/products/birthday-celebration-luxury-gift-box" class="pcard"
+            style="text-decoration:none">
+            <div class="pcard-img">
+              <span class="pcard-badge">Best Seller</span>
+              <div class="pcard-wish"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg></div>
+              <img src="https://islamabadgiftshop.pk/cdn/shop/files/valentine.jpg?v=1766064152"
+                alt="Birthday Celebration Luxury Gift Box">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Birthday</div>
+              <div class="pcard-name">Birthday Celebration Luxury Gift Box</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 14,500</span></div>
+            </div>
+          </a>
+          <!-- 2 -->
+          <a href="https://islamabadgiftshop.pk/products/stunning-white-lily-arrangement" class="pcard"
+            style="text-decoration:none">
+            <div class="pcard-img">
+              <span class="pcard-badge outline">New</span>
+              <div class="pcard-wish"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg></div>
+              <img src="https://islamabadgiftshop.pk/cdn/shop/files/new_37.png?v=1756061267"
+                alt="Stunning White Lily Arrangement">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Flowers</div>
+              <div class="pcard-name">Stunning White Lily Arrangement</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 9,000</span></div>
+            </div>
+          </a>
+          <!-- 3 -->
+          <a href="https://islamabadgiftshop.pk/collections/cakes" class="pcard" style="text-decoration:none">
+            <div class="pcard-img">
+              <div class="pcard-wish"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg></div>
+              <img
+                src="https://islamabadgiftshop.pk/cdn/shop/files/Turkish-Chocolate-Cake-qwtzq8of4xig9agtrtmk68pf3y8p81v9kj6klab7go.jpg?v=1737971133"
+                alt="Turkish Chocolate Cake">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Cakes</div>
+              <div class="pcard-name">Turkish Chocolate Cake</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 4,500</span></div>
+            </div>
+          </a>
+          <!-- 4 -->
+          <a href="https://islamabadgiftshop.pk/products/premium-red-roses-bouquet" class="pcard"
+            style="text-decoration:none">
+            <div class="pcard-img">
+              <span class="pcard-badge">Premium</span>
+              <div class="pcard-wish"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg></div>
+              <img
+                src="https://islamabadgiftshop.pk/cdn/shop/files/vv17_ed54ad3e-c0ef-4ab1-a0e5-1ecbe1455147.jpg?v=1766068156"
+                alt="Premium Red Roses Bouquet">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Flowers</div>
+              <div class="pcard-name">Premium Red Roses Bouquet</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 10,500</span></div>
+            </div>
+          </a>
+          <!-- 5 -->
+          <a href="https://islamabadgiftshop.pk/collections/teddy-bear" class="pcard" style="text-decoration:none">
+            <div class="pcard-img">
+              <span class="pcard-badge">Popular</span>
+              <div class="pcard-wish"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg></div>
+              <img src="https://islamabadgiftshop.pk/cdn/shop/files/b59.webp?v=1736158803"
+                alt="6-Foot White Teddy Bear">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Teddy Bears</div>
+              <div class="pcard-name">6-Foot White Teddy Bear with Imported Flower Bouquet</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 26,599</span></div>
+            </div>
+          </a>
+          <!-- 6 -->
+          <a href="https://islamabadgiftshop.pk/collections/flowers" class="pcard" style="text-decoration:none">
+            <div class="pcard-img">
+              <div class="pcard-wish"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg></div>
+              <img src="https://islamabadgiftshop.pk/cdn/shop/files/new_16.png?v=1756049878" alt="I Love You Bouquet">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Premium Flowers</div>
+              <div class="pcard-name">Luxurious "I Love You" Bouquet with Imported Roses</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 15,000</span></div>
+            </div>
+          </a>
+          <!-- 7 -->
+          <a href="https://islamabadgiftshop.pk/collections/combos" class="pcard" style="text-decoration:none">
+            <div class="pcard-img">
+              <span class="pcard-badge">Best Seller</span>
+              <div class="pcard-wish"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg></div>
+              <img src="https://islamabadgiftshop.pk/cdn/shop/files/affordable_20.png?v=1739201942" alt="Love Combo">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Combos</div>
+              <div class="pcard-name">Love Combo: Roses, 3ft Teddy, Cake &amp; Balloons</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 17,500</span></div>
+            </div>
+          </a>
+          <!-- 8 -->
+          <a href="https://islamabadgiftshop.pk/collections/luxury-flowers" class="pcard" style="text-decoration:none">
+            <div class="pcard-img">
+              <span class="pcard-badge">Exclusive</span>
+              <div class="pcard-wish"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg></div>
+              <img src="https://islamabadgiftshop.pk/cdn/shop/files/affordable_28.png?v=1739100101" alt="Acrylic Box">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Premium</div>
+              <div class="pcard-name">Charming Surprise – Acrylic Box with Teddy &amp; Flowers</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 29,500</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- FLOWERS TAB -->
+      <div class="tab-panel" id="panel-flowers">
+        <div class="products-grid">
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><span class="pcard-badge">Premium</span><img
+                src="https://islamabadgiftshop.pk/cdn/shop/files/vv17_ed54ad3e-c0ef-4ab1-a0e5-1ecbe1455147.jpg?v=1766068156"
+                alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Flowers</div>
+              <div class="pcard-name">Premium Red Roses Bouquet</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 10,500</span></div>
+            </div>
+          </a>
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img src="https://islamabadgiftshop.pk/cdn/shop/files/new_37.png?v=1756061267"
+                alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Flowers</div>
+              <div class="pcard-name">Stunning White Lily Arrangement</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 9,000</span></div>
+            </div>
+          </a>
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img src="https://islamabadgiftshop.pk/cdn/shop/files/new_16.png?v=1756049878"
+                alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Flowers</div>
+              <div class="pcard-name">Luxurious "I Love You" Bouquet</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 15,000</span></div>
+            </div>
+          </a>
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img src="https://islamabadgiftshop.pk/cdn/shop/files/valentine_69.png?v=1736956531"
+                alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Flowers</div>
+              <div class="pcard-name">White Love: Luxurious Imported Flower Bouquet</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 14,800</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- CAKES TAB -->
+      <div class="tab-panel" id="panel-cakes">
+        <div class="products-grid">
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img
+                src="https://islamabadgiftshop.pk/cdn/shop/files/Turkish-Chocolate-Cake-qwtzq8of4xig9agtrtmk68pf3y8p81v9kj6klab7go.jpg?v=1737971133"
+                alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Cakes</div>
+              <div class="pcard-name">Turkish Chocolate Cake</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 4,500</span></div>
+            </div>
+          </a>
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img
+                src="https://islamabadgiftshop.pk/cdn/shop/files/Red-Velvet-pgtfyyk6xhe65coo8lw8t565c7ao96nw0ittufdpc8.jpg?v=1737970619"
+                alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Cakes</div>
+              <div class="pcard-name">Red Velvet Cake</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 3,200</span></div>
+            </div>
+          </a>
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img
+                src="https://islamabadgiftshop.pk/cdn/shop/files/Three-Milk-Cake.jpg?v=1737969259" alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Cakes</div>
+              <div class="pcard-name">Three Milk Cake</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 3,200</span></div>
+            </div>
+          </a>
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img src="https://islamabadgiftshop.pk/cdn/shop/files/cake04.jpg?v=1775671069"
+                alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Cakes</div>
+              <div class="pcard-name">Heart Shape Pink Romantic Customized Cake</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 5,000</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- COMBOS TAB -->
+      <div class="tab-panel" id="panel-combos">
+        <div class="products-grid">
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><span class="pcard-badge">Best Seller</span><img
+                src="https://islamabadgiftshop.pk/cdn/shop/files/affordable_20.png?v=1739201942" alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Combos</div>
+              <div class="pcard-name">Love Combo: Roses, 3ft Teddy, Cake &amp; Balloons</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 17,500</span></div>
+            </div>
+          </a>
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img src="https://islamabadgiftshop.pk/cdn/shop/files/new_10.png?v=1756030139"
+                alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Gift Sets</div>
+              <div class="pcard-name">Golden Elegance Gift Box: Chrysanthemums &amp; Cake</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 7,000</span></div>
+            </div>
+          </a>
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img src="https://islamabadgiftshop.pk/cdn/shop/files/new_9.png?v=1756029558" alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Combos</div>
+              <div class="pcard-name">Balloon Box with Cake &amp; J. Perfume Gift</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 11,000</span></div>
+            </div>
+          </a>
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img src="https://islamabadgiftshop.pk/cdn/shop/files/ramadan_55.png?v=1740904297"
+                alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Baskets</div>
+              <div class="pcard-name">Sweet Surprise Basket – Chocolates, Teddy &amp; Roses</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 12,500</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- TEDDIES TAB -->
+      <div class="tab-panel" id="panel-teddies">
+        <div class="products-grid">
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><span class="pcard-badge">Popular</span><img
+                src="https://islamabadgiftshop.pk/cdn/shop/files/b59.webp?v=1736158803" alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Teddy Bears</div>
+              <div class="pcard-name">6-Foot White Teddy Bear with Flower Bouquet</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 26,599</span></div>
+            </div>
+          </a>
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img src="https://islamabadgiftshop.pk/cdn/shop/files/affordable_44.png?v=1739203646"
+                alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Teddy Bears</div>
+              <div class="pcard-name">Premium 3ft Light Pink Teddy Bear</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 8,500</span></div>
+            </div>
+          </a>
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img src="https://islamabadgiftshop.pk/cdn/shop/files/affordable_43.png?v=1739203353"
+                alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Teddy Bears</div>
+              <div class="pcard-name">Premium 3ft White Teddy Bear</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 8,500</span></div>
+            </div>
+          </a>
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img src="https://islamabadgiftshop.pk/cdn/shop/files/affordable_18.png?v=1739201543"
+                alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Teddy + Flowers</div>
+              <div class="pcard-name">Pink Bouquet with Mini Teddy Bear</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 7,500</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- PREMIUM TAB -->
+      <div class="tab-panel" id="panel-premium">
+        <div class="products-grid">
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><span class="pcard-badge">Exclusive</span><img
+                src="https://islamabadgiftshop.pk/cdn/shop/files/affordable_28.png?v=1739100101" alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Premium</div>
+              <div class="pcard-name">Charming Surprise – Acrylic Box with Teddy &amp; Flowers</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 29,500</span></div>
+            </div>
+          </a>
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img src="https://islamabadgiftshop.pk/cdn/shop/files/eidgifts_1.png?v=1741282577"
+                alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Money Bouquet</div>
+              <div class="pcard-name">Luxurious Eidi Cash Bouquet – 1 Lac with Flowers</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 1,20,000</span></div>
+            </div>
+          </a>
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img
+                src="https://islamabadgiftshop.pk/cdn/shop/files/valentine-2025-01-28T143839.038.png?v=1738058876"
+                alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Premium</div>
+              <div class="pcard-name">Luxurious Velvet GiftBox with Imported Red Roses</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 58,500</span></div>
+            </div>
+          </a>
+          <a href="#" class="pcard" style="text-decoration:none">
+            <div class="pcard-img"><img src="https://islamabadgiftshop.pk/cdn/shop/files/c034.jpg?v=1736608185" alt="">
+              <div class="pcard-overlay"><button class="pcard-quick">Send This Gift</button></div>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-coll">Chocolates</div>
+              <div class="pcard-name">Circle of Chocolate Bliss</div>
+              <div class="pcard-price-row"><span class="pcard-price">Rs. 36,000</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:44px">
+        <a href="https://islamabadgiftshop.pk/collections/all" class="btn btn-outline">
+          View All 500+ Gifts
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+     SECTION 5 · CATEGORY SHOWCASE  (bg: surface-2, full-bleed feel)
+     ============================================================ -->
+  <section class="bg-2 gold-rule-top" style="padding:clamp(56px,7vw,96px) 0">
+    <div class="wrap">
+      <div class="sec-hd reveal" style="margin-bottom:36px">
+        <span class="eyebrow">Explore Collections</span>
+        <h2 class="h-display" style="font-size:clamp(34px,3.8vw,52px)">Shop by <em>Category</em></h2>
+        <p class="section-desc">Explore our complete range — from single stems to grand luxury packages, find the
+          perfect gift for every budget.</p>
+        <div class="ornament-row">
+          <div class="ornament"><span class="ornament-icon">✦</span></div>
+        </div>
+      </div>
+      <!-- 3-column × 2-row, first col spans both rows -->
+      <div class="cat-showcase">
+        <a href="https://islamabadgiftshop.pk/collections/flowers" class="cat-tile span-col"
+          style="text-decoration:none">
+          <img src="https://islamabadgiftshop.pk/cdn/shop/files/valentine_69.png?v=1736956531" alt="Luxury Flowers">
+          <div class="cat-border"></div>
+          <div class="cat-body">
+            <div class="cat-label">Signature Collection</div>
+            <div class="cat-name">Luxury<br>Flowers</div>
+          </div>
+        </a>
+        <a href="https://islamabadgiftshop.pk/collections/cakes" class="cat-tile" style="text-decoration:none">
+          <img src="https://islamabadgiftshop.pk/cdn/shop/files/cake04.jpg?v=1775671069" alt="Custom Cakes">
+          <div class="cat-border"></div>
+          <div class="cat-body">
+            <div class="cat-label">Bespoke</div>
+            <div class="cat-name">Custom Cakes</div>
+          </div>
+        </a>
+        <a href="https://islamabadgiftshop.pk/collections/combos" class="cat-tile" style="text-decoration:none">
+          <img src="https://islamabadgiftshop.pk/cdn/shop/files/new_9.png?v=1756029558" alt="Gift Sets">
+          <div class="cat-border"></div>
+          <div class="cat-body">
+            <div class="cat-label">Curated</div>
+            <div class="cat-name">Gift Sets</div>
+          </div>
+        </a>
+        <a href="https://islamabadgiftshop.pk/collections/teddy-bear" class="cat-tile" style="text-decoration:none">
+          <img src="https://islamabadgiftshop.pk/cdn/shop/files/b59.webp?v=1736158803" alt="Teddy Bears">
+          <div class="cat-border"></div>
+          <div class="cat-body">
+            <div class="cat-label">Huggable</div>
+            <div class="cat-name">Teddy Bears</div>
+          </div>
+        </a>
+        <a href="https://islamabadgiftshop.pk/collections/money-bouquet" class="cat-tile" style="text-decoration:none">
+          <img src="https://islamabadgiftshop.pk/cdn/shop/files/eidgifts.png?v=1741282155" alt="Money Bouquets">
+          <div class="cat-border"></div>
+          <div class="cat-body">
+            <div class="cat-label">Exclusive</div>
+            <div class="cat-name">Money Bouquets</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+     SECTION 6 · FEATURED WIDE  (bg: obsidian, full contrast reset)
+     ============================================================ -->
+  <section class="bg-0 gold-rule-top gold-rule-bot" style="padding:clamp(56px,7vw,96px) 0">
+    <div class="wrap">
+      <div class="feat-wide reveal">
+        <div class="feat-img">
+          <img src="https://islamabadgiftshop.pk/cdn/shop/files/affordable_28.png?v=1739100101" alt="Charming Surprise">
+        </div>
+        <div class="feat-body">
+          <span class="eyebrow">Spotlight Gift</span>
+          <div class="feat-title">Charming Surprise — Acrylic Box with Teddy &amp; Premium Flowers</div>
+          <p class="feat-desc">A breathtaking arrangement of hand-selected premium flowers nestled beside a plush teddy
+            bear, all presented in a crystal-clear luxury acrylic box. The gift that leaves them completely speechless.
+          </p>
+          <div class="feat-price">Rs. 29,500</div>
+          <div class="feat-ctas">
+            <a href="https://islamabadgiftshop.pk" class="btn btn-gold">Send This Gift <svg width="12" height="12"
+                fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></a>
+            <a href="https://islamabadgiftshop.pk/collections/luxury-flowers" class="btn btn-outline">View
+              Collection</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+     SECTION 7 · HOW IT WORKS  (bg: ruled, different texture)
+     ============================================================ -->
+  <section class="bg-ruled gold-rule-top" style="padding:clamp(56px,7vw,96px) 0">
+    <div class="wrap">
+      <div class="sec-hd reveal">
+        <span class="eyebrow">Simple &amp; Effortless</span>
+        <h2 class="h-display" style="font-size:clamp(34px,3.8vw,52px)">How It <em>Works</em></h2>
+        <p class="section-desc">Sending luxury gifts across Pakistan has never been easier — whether you're in Islamabad
+          or overseas.</p>
+        <div class="ornament-row">
+          <div class="ornament"><span class="ornament-icon">✦</span></div>
+        </div>
+      </div>
+      <div class="how-grid">
+        <div class="how-step reveal reveal-delay-1">
+          <span class="how-num-bg">01</span>
+          <span class="how-icon">🎁</span>
+          <h3>Choose Your Gift</h3>
+          <p>Browse 500+ curated luxury gifts — from premium flowers to custom cakes, teddy bears, money bouquets and
+            surprise packages.</p>
+        </div>
+        <div class="how-step reveal reveal-delay-2">
+          <span class="how-num-bg">02</span>
+          <span class="how-icon">✍️</span>
+          <h3>Personalize It</h3>
+          <p>Add recipient details, select your delivery date, enter the address, and write your heartfelt message card
+            — every detail matters.</p>
+        </div>
+        <div class="how-step reveal reveal-delay-3">
+          <span class="how-num-bg">03</span>
+          <span class="how-icon">💳</span>
+          <h3>Secure Checkout</h3>
+          <p>Pay securely via JazzCash, EasyPaisa, bank transfer, or card. Order confirmed instantly with a WhatsApp
+            notification.</p>
+        </div>
+        <div class="how-step reveal reveal-delay-4">
+          <span class="how-num-bg">04</span>
+          <span class="how-icon">🚚</span>
+          <h3>We Deliver Joy</h3>
+          <p>Same-day delivery across Islamabad, Rawalpindi, Lahore, Karachi, Peshawar &amp; 50+ more cities nationwide.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+     SECTION 8 · DELIVERY  (bg: surface-1, subtle lift)
+     ============================================================ -->
+  <section class="bg-1 gold-rule-top gold-rule-bot" style="padding:clamp(56px,7vw,90px) 0">
+    <div class="wrap">
+      <div class="sec-hd reveal">
+        <span class="eyebrow">Nationwide Coverage</span>
+        <h2 class="h-display" style="font-size:clamp(34px,3.8vw,52px)">We Deliver <em>Everywhere</em></h2>
+        <p class="section-desc">Four dedicated city hubs ensuring your gift arrives fresh, on time, and beautifully
+          presented — no matter where in Pakistan.</p>
+        <div class="ornament-row">
+          <div class="ornament"><span class="ornament-icon">✦</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="delivery-grid">
+      <div class="del-city reveal reveal-delay-1">
+        <span class="del-icon">🏛️</span>
+        <div class="del-hub">Primary Hub</div>
+        <h3>Islamabad &amp; RWP</h3>
+        <p>Islamabad, Rawalpindi, Wah Cantt, Haripur, Gujar Khan, Jhelum, Mirpur</p>
+      </div>
+      <div class="del-city reveal reveal-delay-2">
+        <span class="del-icon">🌆</span>
+        <div class="del-hub">Lahore Hub</div>
+        <h3>Punjab</h3>
+        <p>Lahore, Gujranwala, Gujrat, Sialkot, Faisalabad &amp; across Punjab</p>
+      </div>
+      <div class="del-city reveal reveal-delay-3">
+        <span class="del-icon">🏔️</span>
+        <div class="del-hub">Peshawar Hub</div>
+        <h3>KPK</h3>
+        <p>Peshawar, Mardan, Nowshera, Swabi &amp; across Khyber Pakhtunkhwa</p>
+      </div>
+      <div class="del-city reveal reveal-delay-4">
+        <span class="del-icon">🌊</span>
+        <div class="del-hub">Karachi Hub</div>
+        <h3>Sindh</h3>
+        <p>Karachi, Hyderabad &amp; across Sindh province</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+     SECTION 9 · TESTIMONIALS SLIDER  (3 cards per slide, responsive)
+     ============================================================ -->
+  <section class="bg-stripe gold-rule-top" style="padding:clamp(56px,7vw,90px) 0 0">
+    <div class="wrap">
+      <div class="sec-hd reveal">
+        <span class="eyebrow">Customer Stories</span>
+        <h2 class="h-display" style="font-size:clamp(34px,3.8vw,52px)">What They <em>Say</em></h2>
+        <p class="section-desc">Thousands of happy customers across Pakistan and the world trust us to deliver their
+          most meaningful moments.</p>
+        <div class="ornament-row">
+          <div class="ornament"><span class="ornament-icon">✦</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-slider">
+      <div class="testimonial-track" id="testiTrack">
+        <!-- Page 1: slides 1-3 -->
+        <div class="testimonial-page">
+          <div class="testi-card">
+            <div class="testi-quote-mark">"</div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">I sent flowers to my mother in Islamabad from Canada and she was completely
+              speechless. The bouquet arrived fresh and beautifully arranged — exactly as shown. I will absolutely order
+              again!</p>
+            <div class="testi-author">
+              <div class="tav">A</div>
+              <div class="tav-info">
+                <h4>Ayesha K.</h4><span>Toronto, Canada</span>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-quote-mark">"</div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Ordered a birthday cake and flower combo for my sister in Rawalpindi. Same-day
+              delivery was exactly on time. The packaging was honestly stunning — truly felt luxury level.</p>
+            <div class="testi-author">
+              <div class="tav">Z</div>
+              <div class="tav-info">
+                <h4>Zain M.</h4><span>Manchester, UK</span>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-quote-mark">"</div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">The money bouquet I ordered for my cousin's wedding was the highlight of the entire
+              celebration. Incredibly well-crafted — every single guest kept asking where it was from!</p>
+            <div class="testi-author">
+              <div class="tav">S</div>
+              <div class="tav-info">
+                <h4>Sara H.</h4><span>Dubai, UAE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Page 2: slides 4-6 -->
+        <div class="testimonial-page">
+          <div class="testi-card">
+            <div class="testi-quote-mark">"</div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Best gift delivery service in Pakistan by far. I live in London and was worried about
+              ordering online for my parents' anniversary. The team even sent me a photo before delivery. 10 out of 10!
+            </p>
+            <div class="testi-author">
+              <div class="tav">O</div>
+              <div class="tav-info">
+                <h4>Omar F.</h4><span>London, UK</span>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-quote-mark">"</div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Ordered a custom cake with my daughter's photo for her graduation. It arrived exactly
+              on time, looked gorgeous, and tasted even better. Will be ordering for every occasion now.</p>
+            <div class="testi-author">
+              <div class="tav">H</div>
+              <div class="tav-info">
+                <h4>Hina R.</h4><span>Islamabad, Pakistan</span>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-quote-mark">"</div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Sent a teddy bear and flower combo for my niece's birthday from the US. The WhatsApp
+              updates throughout the process gave me real peace of mind. Excellent service all around.</p>
+            <div class="testi-author">
+              <div class="tav">F</div>
+              <div class="tav-info">
+                <h4>Faisal A.</h4><span>Houston, USA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-arrow" id="testiPrev">←</button>
+        <div class="slider-dot active" data-idx="0"></div>
+        <div class="slider-dot" data-idx="1"></div>
+        <button class="slider-arrow" id="testiNext">→</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+     SECTION 10 · NEWSLETTER  (bg: radial gold glow)
+     ============================================================ -->
+  <div class="nl-section bg-0 gold-rule-top">
+    <div class="nl-inner reveal">
+      <span class="eyebrow">Stay Connected</span>
+      <h2 class="h-display" style="font-size:clamp(32px,3.5vw,48px);text-align:center">Get <em>10% Off</em><br>Your
+        First Order</h2>
+      <p class="section-desc" style="margin-top:12px">Subscribe for exclusive offers, seasonal collections, and gifting
+        inspiration — delivered to your inbox.</p>
+      <div class="nl-row">
+        <input class="nl-input" type="email" placeholder="Your email address…">
+        <button class="nl-btn">Subscribe</button>
+      </div>
+      <p class="nl-note">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+     FOOTER
+     ============================================================ -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="f-brand">
+        <span class="logo-name">ISLAMABAD GIFTSHOP.PK</span>
+        <span class="logo-sub">Gifts That Express Your Feelings</span>
+        <p>Pakistan's leading luxury gifting brand. Trusted by overseas Pakistanis worldwide to deliver joy, love, and
+          celebration to their loved ones back home.</p>
+        <div class="f-social">
+          <a href="https://www.facebook.com/share/16unJ8ZTiF/">f</a>
+          <a href="https://www.instagram.com/islamabadgiftshop.pk">ig</a>
+          <a href="https://youtube.com/@islamabadgiftshop">yt</a>
+          <a href="https://wa.me/923326362390">wa</a>
+          <a href="https://pk.linkedin.com/in/islamabad-giftshop-pk-896905312">in</a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="IGS_About.html">About Us</a></li>
+          <li><a href="IGS_Contact.html">Contact</a></li>
+          <li><a href="IGS_FAQ.html">FAQs</a></li>
+          <li><a href="IGS_Collection.html">Collections</a></li>
+          <li><a href="IGS_Policy.html">Privacy Policy</a></li>
+          <li><a href="IGS_Policy.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="https://islamabadgiftshop.pk/collections/flowers">Luxury Flowers</a></li>
+          <li><a href="https://islamabadgiftshop.pk/collections/cakes">Custom Cakes</a></li>
+          <li><a href="https://islamabadgiftshop.pk/collections/combos">Gift Combos</a></li>
+          <li><a href="https://islamabadgiftshop.pk/collections/teddy-bear">Teddy Bears</a></li>
+          <li><a href="https://islamabadgiftshop.pk/collections/money-bouquet">Money Bouquets</a></li>
+          <li><a href="https://islamabadgiftshop.pk/collections/customized">Customize Order</a></li>
+        </ul>
+      </div>
+      <div class="f-col f-del">
+        <h4>Delivery Coverage</h4>
+        <p><span class="hub">Islamabad Hub —</span><br>Rawalpindi, Wah Cantt, Haripur, Gujar Khan, Jhelum, Mirpur</p>
+        <p><span class="hub">Lahore Hub —</span><br>Gujranwala, Gujrat, Sialkot, Faisalabad &amp; Punjab</p>
+        <p><span class="hub">Peshawar Hub —</span><br>Mardan, Nowshera, Swabi &amp; KPK</p>
+        <p><span class="hub">Karachi Hub —</span><br>Hyderabad &amp; across Sindh</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 IslamabadGiftShop.pk — All rights reserved.</p>
+      <div class="pay-badges">
+        <span class="pay-b">JazzCash</span>
+        <span class="pay-b">EasyPaisa</span>
+        <span class="pay-b">Bank Transfer</span>
+        <span class="pay-b">Visa / MC</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/923326362390" class="wa-float" title="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+    </svg>
+  </a>
+
+
+  <script>
+    /* ============================================================
+       TABS — fully functional, switch grid content on click
+       ============================================================ */
+    const tabMap = {
+      all: 'panel-all', flowers: 'panel-flowers', cakes: 'panel-cakes',
+      combos: 'panel-combos', teddies: 'panel-teddies', premium: 'panel-premium'
+    };
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        const panel = document.getElementById(tabMap[btn.dataset.tab]);
+        if (panel) {
+          panel.classList.add('active');
+          // animate in
+          panel.style.opacity = '0'; panel.style.transform = 'translateY(12px)';
+          requestAnimationFrame(() => {
+            panel.style.transition = 'opacity .35s ease,transform .35s ease';
+            panel.style.opacity = '1'; panel.style.transform = 'translateY(0)';
+          });
+        }
+      });
+    });
+
+    /* ============================================================
+       TESTIMONIAL SLIDER — moves by full "page" (3 cards on desktop,
+       2 on tablet, 1 on mobile — CSS handles the per-page columns,
+       JS just slides between pages)
+       ============================================================ */
+    const track = document.getElementById('testiTrack');
+    const dots = document.querySelectorAll('.slider-dot');
+    let current = 0;
+    const totalPages = document.querySelectorAll('.testimonial-page').length;
+
+    function goTo(idx) {
+      current = (idx + totalPages) % totalPages;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+    document.getElementById('testiNext').addEventListener('click', () => goTo(current + 1));
+    document.getElementById('testiPrev').addEventListener('click', () => goTo(current - 1));
+    dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.idx)));
+
+    // Auto-advance
+    setInterval(() => goTo(current + 1), 6000);
+
+    /* ============================================================
+       SCROLL REVEAL
+       ============================================================ */
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    /* ============================================================
+       STICKY HEADER SHADOW
+       ============================================================ */
+    window.addEventListener('scroll', () => {
+      const h = document.querySelector('.site-header');
+      h.style.boxShadow = window.scrollY > 60 ? '0 4px 40px rgba(0,0,0,.65)' : 'none';
+    }, { passive: true });
+
+    /* ============================================================
+       WISHLIST TOGGLE
+       ============================================================ */
+    document.querySelectorAll('.pcard-wish').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault(); e.stopPropagation();
+        const s = btn.querySelector('svg');
+        const active = s.style.fill === 'var(--gold)';
+        s.style.fill = active ? 'none' : 'var(--gold)';
+        s.style.stroke = active ? 'var(--champ-muted)' : 'var(--gold)';
+      });
+    });
+  </script>
+
+</body>
+
+</html>

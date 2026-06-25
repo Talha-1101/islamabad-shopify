@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — IslamabadGiftShop.pk | Pakistan's Premier Luxury Gifting Brand</title>
+  <meta name="description" content="Learn the story behind IslamabadGiftShop.pk — Pakistan's most trusted luxury gifting brand, delivering premium flowers, cakes & gifts across Pakistan since 2019.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --obsidian: #080808;
+      --surface-1: #111111;
+      --surface-2: #161616;
+      --surface-3: #1C1C1C;
+      --gold: #C9A84C;
+      --gold-bright: #E4C06E;
+      --gold-dim: #A8862E;
+      --champagne: #E8D5A3;
+      --champ-muted: #C4B08A;
+      --cream: #F5F0E8;
+      --muted: #666666;
+      --border: rgba(201, 168, 76, .18);
+      --border-hi: rgba(201, 168, 76, .45);
+      --fw-display: 'Cormorant Garamond', serif;
+      --fw-ui: 'Montserrat', sans-serif;
+      --fw-label: 'Cinzel', serif;
+      --max: 1280px;
+      --px: clamp(20px, 4vw, 48px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+    html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100vw }
+    body { background: var(--obsidian); color: var(--cream); font-family: var(--fw-ui); font-size: 15px; line-height: 1.6; overflow-x: hidden }
+    img { display: block; max-width: 100% }
+    a { text-decoration: none; color: inherit }
+    button { border: none; cursor: pointer; font-family: inherit }
+    ul { list-style: none }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding-inline: var(--px); width: 100%; box-sizing: border-box }
+
+    .eyebrow { font-family: var(--fw-label); font-size: 10px; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; display: block; margin-bottom: 14px }
+    .h-display { font-family: var(--fw-display); font-weight: 300; color: var(--cream); line-height: 1.1 }
+    .h-display em { font-style: italic; color: var(--gold) }
+    .section-desc { font-size: 13px; color: var(--muted); line-height: 1.85; letter-spacing: .3px; max-width: 520px; margin-inline: auto }
+
+    .btn { display: inline-flex; align-items: center; gap: 9px; font-family: var(--fw-label); font-size: 9.5px; letter-spacing: 2.8px; text-transform: uppercase; font-weight: 600; cursor: pointer; transition: all .28s ease }
+    .btn-gold { background: var(--gold); color: var(--obsidian); padding: 14px 32px; border: none }
+    .btn-gold:hover { background: var(--gold-bright); box-shadow: 0 6px 28px rgba(201,168,76,.35) }
+    .btn-outline { color: var(--champagne); padding: 13px 32px; border: 1px solid var(--border-hi); background: transparent }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,.06) }
+
+    .ornament { display: flex; align-items: center; gap: 12px; justify-content: center; margin: 0 auto }
+    .ornament::before, .ornament::after { content: ''; height: 1px; flex: 1; max-width: 160px }
+    .ornament::before { background: linear-gradient(90deg, transparent, var(--gold)) }
+    .ornament::after { background: linear-gradient(270deg, transparent, var(--gold)) }
+    .ornament-icon { font-size: 13px; color: var(--gold); flex-shrink: 0 }
+
+    .bg-0 { background: var(--obsidian) }
+    .bg-1 { background: var(--surface-1) }
+    .bg-2 { background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(201,168,76,.07) 0%, transparent 70%), var(--surface-1) }
+    .bg-ruled { background-color: var(--surface-2); background-image: linear-gradient(rgba(201,168,76,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,.025) 1px, transparent 1px); background-size: 60px 60px }
+    .bg-stripe { background-color: var(--obsidian); background-image: repeating-linear-gradient(135deg, rgba(201,168,76,.03) 0px, rgba(201,168,76,.03) 1px, transparent 1px, transparent 40px) }
+    .gold-rule-top { border-top: 1px solid var(--border) }
+    .gold-rule-bot { border-bottom: 1px solid var(--border) }
+
+    /* ANN BAR */
+    .ann-bar { background: var(--gold); color: var(--obsidian); text-align: center; padding: 9px var(--px); font-family: var(--fw-label); font-size: 10.5px; letter-spacing: 2.5px; font-weight: 600; text-transform: uppercase; overflow-x: auto; white-space: nowrap; scrollbar-width: none }
+    .ann-bar::-webkit-scrollbar { display: none }
+    .ann-bar span { margin: 0 14px; opacity: .45 }
+
+    /* HEADER */
+    .site-header { position: sticky; top: 0; z-index: 9000; background: rgba(8,8,8,.96); backdrop-filter: blur(22px); border-bottom: 1px solid var(--border); width: 100% }
+    .header-top { display: flex; align-items: center; justify-content: space-between; height: 68px; max-width: var(--max); margin-inline: auto; padding-inline: var(--px); gap: 10px }
+    .h-social { display: flex; gap: 14px; align-items: center; flex-shrink: 0 }
+    .h-social a { color: var(--muted); transition: color .2s; display: flex }
+    .h-social a:hover { color: var(--gold) }
+    .h-social svg { width: 13px; height: 13px }
+    .logo { flex: 1; text-align: center; cursor: pointer; min-width: 0 }
+    .logo-name { font-family: var(--fw-label); font-size: 19px; letter-spacing: 4px; color: var(--gold); display: block; line-height: 1.1 }
+    .logo-sub { font-family: var(--fw-ui); font-size: 8.5px; letter-spacing: 3.5px; color: var(--champ-muted); text-transform: uppercase; display: block; margin-top: 2px }
+    .h-actions { display: flex; align-items: center; gap: 18px; flex-shrink: 0 }
+    .h-actions a { color: var(--champ-muted); font-size: 12px; transition: color .2s; display: flex; align-items: center; gap: 5px }
+    .h-actions a:hover { color: var(--gold) }
+    .h-actions svg { width: 15px; height: 15px }
+    .cart-wrap { position: relative }
+    .cart-badge { position: absolute; top: -7px; right: -8px; background: var(--gold); color: var(--obsidian); font-size: 8px; font-weight: 700; width: 15px; height: 15px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--fw-label) }
+
+    /* NAV */
+    .main-nav { border-top: 1px solid var(--border); max-width: var(--max); margin-inline: auto; padding-inline: var(--px); display: flex; justify-content: center; align-items: stretch }
+    .nav-item { position: relative; display: flex; flex-shrink: 0 }
+    .nav-link { display: flex; align-items: center; gap: 5px; padding: 13px 15px; font-family: var(--fw-label); font-size: 9.5px; letter-spacing: 2.2px; color: var(--champ-muted); text-transform: uppercase; transition: color .2s; white-space: nowrap; border-bottom: 2px solid transparent }
+    .nav-link:hover, .nav-link.active { color: var(--gold); border-bottom-color: var(--gold) }
+
+    /* PAGE HERO */
+    .page-hero { position: relative; padding: clamp(80px, 12vw, 140px) 0 clamp(60px, 8vw, 100px); overflow: hidden; text-align: center }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(201,168,76,.08) 0%, transparent 70%) }
+    .page-hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(201,168,76,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,.025) 1px, transparent 1px); background-size: 72px 72px }
+    .page-hero-content { position: relative; z-index: 2 }
+    .page-hero-eyebrow { font-family: var(--fw-label); font-size: 9.5px; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 20px }
+    .page-hero-eyebrow::before, .page-hero-eyebrow::after { content: ''; width: 36px; height: 1px; background: var(--gold) }
+    .page-hero h1 { font-family: var(--fw-display); font-size: clamp(44px, 6vw, 82px); font-weight: 300; color: var(--cream); line-height: 1.05; margin-bottom: 20px }
+    .page-hero h1 em { font-style: italic; color: var(--gold) }
+    .page-hero-desc { font-size: 13px; color: var(--muted); line-height: 1.85; max-width: 520px; margin: 0 auto }
+
+    .sec-hd { text-align: center; margin-bottom: 52px }
+    .sec-hd .eyebrow { margin-bottom: 10px }
+    .sec-hd .h-display { font-size: clamp(34px, 3.8vw, 52px); margin-bottom: 16px }
+    .ornament-row { margin: 16px auto 0; display: flex; justify-content: center }
+
+    /* STORY SECTION */
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 80px); align-items: center }
+    .story-img { position: relative; aspect-ratio: 4/5; overflow: hidden }
+    .story-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.75) }
+    .story-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(8,8,8,.6) 100%) }
+    .story-img-frame { position: absolute; inset: 12px; border: 1px solid rgba(201,168,76,.3); z-index: 2; pointer-events: none }
+    .story-body { padding: 0 }
+    .story-body .eyebrow { margin-bottom: 10px }
+    .story-title { font-family: var(--fw-display); font-size: clamp(30px, 3.5vw, 48px); font-weight: 300; color: var(--cream); margin-bottom: 22px; line-height: 1.2 }
+    .story-title em { font-style: italic; color: var(--gold) }
+    .story-text { font-size: 13px; color: var(--muted); line-height: 1.9; margin-bottom: 16px }
+    .story-text:last-of-type { margin-bottom: 32px }
+
+    /* STAT GRID */
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 64px }
+    .stat-card { background: var(--surface-2); border: 1px solid var(--border); padding: clamp(24px, 3.5vw, 40px) clamp(16px, 2.5vw, 28px); text-align: center; position: relative; overflow: hidden; transition: background .3s }
+    .stat-card:hover { background: var(--surface-3) }
+    .stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0; transition: opacity .3s }
+    .stat-card:hover::before { opacity: 1 }
+    .stat-num { font-family: var(--fw-label); font-size: clamp(28px, 3.5vw, 44px); color: var(--gold); letter-spacing: 2px; display: block; line-height: 1; margin-bottom: 8px }
+    .stat-label { font-size: 11px; color: var(--muted); letter-spacing: 1px; font-family: var(--fw-label); text-transform: uppercase }
+
+    /* VALUES SECTION */
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px }
+    .value-card { background: var(--surface-2); border: 1px solid var(--border); padding: clamp(28px, 4vw, 48px) clamp(20px, 3vw, 36px); position: relative; overflow: hidden; transition: background .3s }
+    .value-card:hover { background: var(--surface-3) }
+    .value-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0; transition: opacity .3s }
+    .value-card:hover::before { opacity: 1 }
+    .value-icon { font-size: 32px; margin-bottom: 20px; display: block }
+    .value-card h3 { font-family: var(--fw-label); font-size: 10px; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; margin-bottom: 12px }
+    .value-card p { font-size: 12.5px; color: var(--muted); line-height: 1.8 }
+
+    /* TEAM SECTION */
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px }
+    .team-card { position: relative; overflow: hidden; aspect-ratio: 3/4; cursor: default }
+    .team-card img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.6); transition: filter .4s, transform .6s }
+    .team-card:hover img { filter: brightness(.8); transform: scale(1.04) }
+    .team-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.88) 100%) }
+    .team-frame { position: absolute; inset: 8px; border: 1px solid rgba(201,168,76,0); z-index: 3; pointer-events: none; transition: border-color .35s }
+    .team-card:hover .team-frame { border-color: rgba(201,168,76,.4) }
+    .team-info { position: absolute; bottom: 24px; left: 24px; right: 24px; z-index: 4 }
+    .team-role { font-family: var(--fw-label); font-size: 7.5px; letter-spacing: 2.5px; color: var(--gold); text-transform: uppercase; margin-bottom: 5px }
+    .team-name { font-family: var(--fw-display); font-size: clamp(18px, 2vw, 24px); font-weight: 300; color: var(--cream) }
+
+    /* TIMELINE */
+    .timeline { position: relative; padding: 0 }
+    .timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: linear-gradient(180deg, transparent, var(--gold), transparent); transform: translateX(-50%) }
+    .tl-item { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 48px; position: relative }
+    .tl-item:nth-child(odd) .tl-body { grid-column: 1; padding-right: clamp(32px, 5vw, 64px); text-align: right }
+    .tl-item:nth-child(odd) .tl-year-col { grid-column: 2; padding-left: clamp(32px, 5vw, 64px) }
+    .tl-item:nth-child(even) .tl-year-col { grid-column: 1; padding-right: clamp(32px, 5vw, 64px); text-align: right; order: -1 }
+    .tl-item:nth-child(even) .tl-body { grid-column: 2; padding-left: clamp(32px, 5vw, 64px) }
+    .tl-dot { position: absolute; left: 50%; top: 8px; width: 12px; height: 12px; background: var(--gold); border: 2px solid var(--obsidian); border-radius: 50%; transform: translateX(-50%); z-index: 2 }
+    .tl-year { font-family: var(--fw-label); font-size: 22px; color: var(--gold); letter-spacing: 2px; display: block; margin-bottom: 4px }
+    .tl-body h3 { font-family: var(--fw-label); font-size: 9.5px; letter-spacing: 2px; color: var(--champagne); text-transform: uppercase; margin-bottom: 8px }
+    .tl-body p { font-size: 12.5px; color: var(--muted); line-height: 1.8 }
+
+    /* CTA BANNER */
+    .cta-banner { position: relative; overflow: hidden; text-align: center; padding: clamp(60px, 8vw, 100px) var(--px) }
+    .cta-banner::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(201,168,76,.1) 0%, transparent 70%) }
+    .cta-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto }
+    .cta-title { font-family: var(--fw-display); font-size: clamp(32px, 4vw, 56px); font-weight: 300; color: var(--cream); line-height: 1.15; margin-bottom: 18px }
+    .cta-title em { font-style: italic; color: var(--gold) }
+    .cta-desc { font-size: 13px; color: var(--muted); line-height: 1.85; margin-bottom: 36px }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap }
+
+    /* FOOTER */
+    .site-footer { background: #0C0C0C; border-top: 1px solid var(--border) }
+    .footer-top { max-width: var(--max); margin-inline: auto; padding: clamp(48px,7vw,80px) var(--px) clamp(36px,5vw,60px); display: grid; grid-template-columns: 1.8fr 1fr 1fr 1.4fr; gap: clamp(24px,4vw,60px) }
+    .f-brand .logo-name { font-size: 16px; margin-bottom: 4px; display: block }
+    .f-brand .logo-sub { display: block; margin-bottom: 18px }
+    .f-brand p { font-size: 12px; color: var(--muted); line-height: 1.9; max-width: 260px; margin-bottom: 22px }
+    .f-social { display: flex; gap: 9px; flex-wrap: wrap }
+    .f-social a { width: 34px; height: 34px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 11px; transition: all .2s }
+    .f-social a:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,.07) }
+    .f-col h4 { font-family: var(--fw-label); font-size: 9px; letter-spacing: 2.5px; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border) }
+    .f-col li { margin-bottom: 9px }
+    .f-col a { font-size: 12px; color: var(--muted); letter-spacing: .3px; transition: color .18s; display: flex; align-items: center; gap: 7px }
+    .f-col a::before { content: '—'; font-size: 9px; color: var(--border-hi) }
+    .f-col a:hover { color: var(--champagne) }
+    .f-del p { font-size: 11.5px; color: var(--muted); line-height: 1.8; margin-bottom: 10px }
+    .f-del .hub { font-family: var(--fw-label); font-size: 8.5px; letter-spacing: 1.5px; color: var(--champ-muted); text-transform: uppercase }
+    .footer-bottom { border-top: 1px solid var(--border); padding: 18px var(--px); max-width: var(--max); margin-inline: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px }
+    .footer-bottom p { font-size: 11px; color: var(--muted); letter-spacing: .3px }
+    .pay-badges { display: flex; gap: 8px; flex-wrap: wrap }
+    .pay-b { background: var(--surface-3); border: 1px solid var(--border); padding: 4px 11px; font-family: var(--fw-label); font-size: 8.5px; letter-spacing: 1px; color: var(--champ-muted); text-transform: uppercase }
+
+    /* WA FLOAT */
+    .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 8999; width: 54px; height: 54px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 22px rgba(37,211,102,.45); transition: transform .2s, box-shadow .2s }
+    .wa-float:hover { transform: scale(1.09); box-shadow: 0 8px 30px rgba(37,211,102,.55) }
+    .wa-float svg { width: 27px; height: 27px; fill: #fff }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease }
+    .reveal.visible { opacity: 1; transform: translateY(0) }
+    .reveal-delay-1 { transition-delay: .1s }
+    .reveal-delay-2 { transition-delay: .2s }
+    .reveal-delay-3 { transition-delay: .3s }
+
+    @media(max-width: 900px) {
+      .story-grid { grid-template-columns: 1fr }
+      .stat-grid { grid-template-columns: repeat(2, 1fr) }
+      .values-grid { grid-template-columns: 1fr }
+      .team-grid { grid-template-columns: repeat(2, 1fr) }
+      .timeline::before { left: 20px }
+      .tl-item { grid-template-columns: 1fr }
+      .tl-item:nth-child(odd) .tl-body, .tl-item:nth-child(even) .tl-body { grid-column: 1; padding-left: 50px; padding-right: 0; text-align: left }
+      .tl-item:nth-child(odd) .tl-year-col, .tl-item:nth-child(even) .tl-year-col { grid-column: 1; padding-left: 50px; padding-right: 0; text-align: left; order: -1 }
+      .tl-dot { left: 20px }
+      .footer-top { grid-template-columns: 1fr 1fr }
+    }
+
+    @media(max-width: 600px) {
+      .stat-grid { grid-template-columns: repeat(2, 1fr) }
+      .team-grid { grid-template-columns: 1fr }
+      .footer-top { grid-template-columns: 1fr }
+      .footer-bottom { flex-direction: column; text-align: center }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="ann-bar">
+    ⚡ Same-Day Delivery Available<span>|</span>Trusted by Overseas Pakistanis — USA · UK · Canada<span>|</span>WhatsApp: 0332-6362390
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-top">
+      <div class="h-social">
+        <a href="https://www.facebook.com/share/16unJ8ZTiF/" title="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/islamabadgiftshop.pk" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://wa.me/923326362390" title="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        </a>
+      </div>
+      <a class="logo" href="IGS_Homepage_v2.html">
+        <span class="logo-name">ISLAMABAD GIFTSHOP.PK</span>
+        <span class="logo-sub">Gifts That Express Your Feelings</span>
+      </a>
+      <div class="h-actions">
+        <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span style="font-family:var(--fw-label);font-size:9px;letter-spacing:1px">Account</span></a>
+        <a href="#" class="cart-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-badge">0</span></a>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="nav-item"><a class="nav-link" href="IGS_Homepage_v2.html">Home</a></div>
+      <div class="nav-item"><a class="nav-link" href="IGS_Collection.html">Collections</a></div>
+      <div class="nav-item"><a class="nav-link active" href="IGS_About.html">About</a></div>
+      <div class="nav-item"><a class="nav-link" href="IGS_Contact.html">Contact</a></div>
+      <div class="nav-item"><a class="nav-link" href="IGS_FAQ.html">FAQs</a></div>
+      <div class="nav-item"><a class="nav-link" href="IGS_Policy.html">Policy</a></div>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero bg-0">
+    <div class="page-hero-grid"></div>
+    <div class="wrap page-hero-content">
+      <div class="page-hero-eyebrow">Our Story</div>
+      <h1>Pakistan's Premier<br><em>Luxury Gifting</em><br>Brand</h1>
+      <p class="page-hero-desc">Born from a passion for meaningful moments, we've been turning emotions into exquisite gifts since 2019 — delivering joy to every corner of Pakistan and beyond.</p>
+    </div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section class="bg-1 gold-rule-top" style="padding: clamp(60px,8vw,100px) 0">
+    <div class="wrap">
+      <div class="story-grid">
+        <div class="story-img reveal">
+          <img src="https://islamabadgiftshop.pk/cdn/shop/files/vv17_ed54ad3e-c0ef-4ab1-a0e5-1ecbe1455147.jpg?v=1766068156" alt="Our Story">
+          <div class="story-img-frame"></div>
+        </div>
+        <div class="story-body reveal reveal-delay-1">
+          <span class="eyebrow">How We Started</span>
+          <div class="story-title">From a Single Bouquet<br>to <em>10,000+ Smiles</em></div>
+          <p class="story-text">IslamabadGiftShop.pk was founded in 2019 with a single, heartfelt mission: to make it effortless for Pakistanis around the world to express their love and celebrate life's most meaningful moments with the people they care about most.</p>
+          <p class="story-text">What began as a small flower delivery operation in Islamabad has grown into Pakistan's most trusted luxury gifting brand — with four city delivery hubs, a team of 40+ gifting specialists, and over 500 curated products that span premium flowers, custom cakes, teddy bears, money bouquets, and personalized gift sets.</p>
+          <p class="story-text">Our customers aren't just buyers — they're people who want to say "I love you," "congratulations," "I'm sorry," or "I'm thinking of you." We take that responsibility seriously, and we pour that care into every single gift we create and deliver.</p>
+          <a href="IGS_Collection.html" class="btn btn-gold">Explore Our Collection <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="bg-ruled gold-rule-top gold-rule-bot" style="padding: clamp(56px,7vw,90px) 0">
+    <div class="wrap">
+      <div class="sec-hd reveal">
+        <span class="eyebrow">By The Numbers</span>
+        <h2 class="h-display" style="font-size:clamp(34px,3.8vw,52px)">Our <em>Impact</em></h2>
+        <div class="ornament-row"><div class="ornament"><span class="ornament-icon">✦</span></div></div>
+      </div>
+      <div class="stat-grid">
+        <div class="stat-card reveal reveal-delay-1">
+          <span class="stat-num">10K+</span>
+          <span class="stat-label">Orders Delivered</span>
+        </div>
+        <div class="stat-card reveal reveal-delay-2">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Luxury Gift Options</span>
+        </div>
+        <div class="stat-card reveal reveal-delay-3">
+          <span class="stat-num">4</span>
+          <span class="stat-label">City Delivery Hubs</span>
+        </div>
+        <div class="stat-card reveal reveal-delay-3">
+          <span class="stat-num">4.9★</span>
+          <span class="stat-label">Average Review Score</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="bg-stripe gold-rule-top" style="padding: clamp(56px,7vw,96px) 0">
+    <div class="wrap">
+      <div class="sec-hd reveal">
+        <span class="eyebrow">What We Believe</span>
+        <h2 class="h-display" style="font-size:clamp(34px,3.8vw,52px)">Our Core <em>Values</em></h2>
+        <p class="section-desc">Every gift we create is guided by principles that ensure your loved ones feel truly special — every single time.</p>
+        <div class="ornament-row"><div class="ornament"><span class="ornament-icon">✦</span></div></div>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal reveal-delay-1">
+          <span class="value-icon">💎</span>
+          <h3>Uncompromising Quality</h3>
+          <p>Every flower is hand-selected, every cake is freshly baked, every gift box is meticulously assembled. We settle for nothing less than perfection because your relationships deserve it.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-2">
+          <span class="value-icon">⚡</span>
+          <h3>Reliable Speed</h3>
+          <p>We understand that gifting moments are time-sensitive. Our same-day delivery infrastructure across 4 city hubs ensures your gift arrives when it matters most — never late.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-3">
+          <span class="value-icon">🌍</span>
+          <h3>Serving the Diaspora</h3>
+          <p>We are the bridge between overseas Pakistanis and their loved ones back home. Our international ordering system is trusted by customers in USA, UK, Canada, UAE & beyond.</p>
+        </div>
+        <div class="value-card reveal">
+          <span class="value-icon">✍️</span>
+          <h3>Deep Personalization</h3>
+          <p>Generic gifts have no place here. We offer full customization — custom message cards, name-engraved items, personalized cake toppers, and tailored gift curation for every occasion.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-1">
+          <span class="value-icon">🤝</span>
+          <h3>Transparent Service</h3>
+          <p>We send pre-delivery photos via WhatsApp, keep you updated throughout the process, and offer hassle-free replacements if anything falls below your expectations.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-2">
+          <span class="value-icon">♻️</span>
+          <h3>Thoughtful Packaging</h3>
+          <p>Our signature packaging is designed to elevate the unboxing experience. Premium boxes, satin ribbons, and elegant presentation make every gift feel like a luxury event.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY TIMELINE -->
+  <section class="bg-2 gold-rule-top" style="padding: clamp(56px,7vw,100px) 0">
+    <div class="wrap">
+      <div class="sec-hd reveal">
+        <span class="eyebrow">Our Journey</span>
+        <h2 class="h-display" style="font-size:clamp(34px,3.8vw,52px)">Growing with <em>Every Gift</em></h2>
+        <div class="ornament-row"><div class="ornament"><span class="ornament-icon">✦</span></div></div>
+      </div>
+      <div class="timeline" style="max-width:800px;margin:0 auto">
+        <div class="tl-item">
+          <div class="tl-body">
+            <h3>The Beginning</h3>
+            <p>IslamabadGiftShop.pk is founded with a small team of 3 and a focus on premium flower delivery across Islamabad and Rawalpindi.</p>
+          </div>
+          <div class="tl-year-col"><span class="tl-year">2019</span></div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-body">
+            <h3>Expansion & Cakes</h3>
+            <p>Custom cakes and gift combos are added to our catalog. The overseas Pakistani community begins placing international orders, establishing our reputation abroad.</p>
+          </div>
+          <div class="tl-year-col"><span class="tl-year">2020</span></div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-body">
+            <h3>Lahore & Karachi Hubs</h3>
+            <p>We expand beyond the twin cities by launching our Lahore and Karachi delivery hubs, enabling nationwide same-day delivery coverage.</p>
+          </div>
+          <div class="tl-year-col"><span class="tl-year">2022</span></div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-body">
+            <h3>10,000 Orders Milestone</h3>
+            <p>We celebrate delivering over 10,000 orders and launch our money bouquet and luxury acrylic box collections, setting new standards in premium gifting across Pakistan.</p>
+          </div>
+          <div class="tl-year-col"><span class="tl-year">2024</span></div>
+          <div class="tl-dot"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="bg-0 gold-rule-top" style="padding: 0">
+    <div class="cta-banner">
+      <div class="cta-inner reveal">
+        <span class="eyebrow">Ready to Send Love?</span>
+        <div class="cta-title">Create a Moment<br>They'll <em>Never Forget</em></div>
+        <p class="cta-desc">Browse 500+ curated luxury gifts and let us handle the rest — from beautiful packaging to same-day delivery across Pakistan.</p>
+        <div class="cta-btns">
+          <a href="IGS_Collection.html" class="btn btn-gold">Shop Now <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="IGS_Contact.html" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="f-brand">
+        <span class="logo-name">ISLAMABAD GIFTSHOP.PK</span>
+        <span class="logo-sub">Gifts That Express Your Feelings</span>
+        <p>Pakistan's leading luxury gifting brand. Trusted by overseas Pakistanis worldwide to deliver joy, love, and celebration to their loved ones back home.</p>
+        <div class="f-social">
+          <a href="https://www.facebook.com/share/16unJ8ZTiF/">f</a>
+          <a href="https://www.instagram.com/islamabadgiftshop.pk">ig</a>
+          <a href="https://youtube.com/@islamabadgiftshop">yt</a>
+          <a href="https://wa.me/923326362390">wa</a>
+          <a href="https://pk.linkedin.com/in/islamabad-giftshop-pk-896905312">in</a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="IGS_Homepage_v2.html">Home</a></li>
+          <li><a href="IGS_About.html">About Us</a></li>
+          <li><a href="IGS_Contact.html">Contact</a></li>
+          <li><a href="IGS_FAQ.html">FAQs</a></li>
+          <li><a href="IGS_Policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="https://islamabadgiftshop.pk/collections/flowers">Luxury Flowers</a></li>
+          <li><a href="https://islamabadgiftshop.pk/collections/cakes">Custom Cakes</a></li>
+          <li><a href="https://islamabadgiftshop.pk/collections/combos">Gift Combos</a></li>
+          <li><a href="https://islamabadgiftshop.pk/collections/teddy-bear">Teddy Bears</a></li>
+          <li><a href="https://islamabadgiftshop.pk/collections/money-bouquet">Money Bouquets</a></li>
+        </ul>
+      </div>
+      <div class="f-col f-del">
+        <h4>Delivery Coverage</h4>
+        <p><span class="hub">Islamabad Hub —</span><br>Rawalpindi, Wah Cantt, Haripur, Gujar Khan</p>
+        <p><span class="hub">Lahore Hub —</span><br>Gujranwala, Sialkot, Faisalabad & Punjab</p>
+        <p><span class="hub">Peshawar Hub —</span><br>Mardan, Nowshera & KPK</p>
+        <p><span class="hub">Karachi Hub —</span><br>Hyderabad & across Sindh</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 IslamabadGiftShop.pk — All rights reserved.</p>
+      <div class="pay-badges">
+        <span class="pay-b">JazzCash</span>
+        <span class="pay-b">EasyPaisa</span>
+        <span class="pay-b">Bank Transfer</span>
+        <span class="pay-b">Visa / MC</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/923326362390" class="wa-float" title="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+  </a>
+
+  <script>
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    window.addEventListener('scroll', () => {
+      const h = document.querySelector('.site-header');
+      h.style.boxShadow = window.scrollY > 60 ? '0 4px 40px rgba(0,0,0,.65)' : 'none';
+    }, { passive: true });
+  </script>
+
+</body>
+</html>

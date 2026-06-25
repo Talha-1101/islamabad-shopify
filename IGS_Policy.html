@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policies — IslamabadGiftShop.pk | Refund, Privacy & Terms</title>
+  <meta name="description" content="Read the full privacy policy, refund policy, and terms of service for IslamabadGiftShop.pk — Pakistan's premier luxury gifting brand.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --obsidian: #080808; --surface-1: #111111; --surface-2: #161616; --surface-3: #1C1C1C;
+      --gold: #C9A84C; --gold-bright: #E4C06E; --champagne: #E8D5A3; --champ-muted: #C4B08A;
+      --cream: #F5F0E8; --muted: #666666;
+      --border: rgba(201,168,76,.18); --border-hi: rgba(201,168,76,.45);
+      --fw-display: 'Cormorant Garamond', serif; --fw-ui: 'Montserrat', sans-serif; --fw-label: 'Cinzel', serif;
+      --max: 1280px; --px: clamp(20px,4vw,48px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+    html { scroll-behavior: smooth; overflow-x: hidden }
+    body { background: var(--obsidian); color: var(--cream); font-family: var(--fw-ui); font-size: 15px; line-height: 1.6; overflow-x: hidden }
+    img { display: block; max-width: 100% }
+    a { text-decoration: none; color: inherit }
+    button { border: none; cursor: pointer; font-family: inherit }
+    ul { list-style: none }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding-inline: var(--px); width: 100%; box-sizing: border-box }
+    .eyebrow { font-family: var(--fw-label); font-size: 10px; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; display: block; margin-bottom: 14px }
+    .h-display { font-family: var(--fw-display); font-weight: 300; color: var(--cream); line-height: 1.1 }
+    .h-display em { font-style: italic; color: var(--gold) }
+    .ornament { display: flex; align-items: center; gap: 12px; justify-content: center; margin: 0 auto }
+    .ornament::before, .ornament::after { content: ''; height: 1px; flex: 1; max-width: 160px }
+    .ornament::before { background: linear-gradient(90deg, transparent, var(--gold)) }
+    .ornament::after { background: linear-gradient(270deg, transparent, var(--gold)) }
+    .ornament-icon { font-size: 13px; color: var(--gold); flex-shrink: 0 }
+    .bg-0 { background: var(--obsidian) }
+    .bg-1 { background: var(--surface-1) }
+    .bg-ruled { background-color: var(--surface-2); background-image: linear-gradient(rgba(201,168,76,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,.025) 1px, transparent 1px); background-size: 60px 60px }
+    .gold-rule-top { border-top: 1px solid var(--border) }
+
+    .ann-bar { background: var(--gold); color: var(--obsidian); text-align: center; padding: 9px var(--px); font-family: var(--fw-label); font-size: 10.5px; letter-spacing: 2.5px; font-weight: 600; text-transform: uppercase; overflow-x: auto; white-space: nowrap; scrollbar-width: none }
+    .ann-bar::-webkit-scrollbar { display: none }
+    .ann-bar span { margin: 0 14px; opacity: .45 }
+
+    .site-header { position: sticky; top: 0; z-index: 9000; background: rgba(8,8,8,.96); backdrop-filter: blur(22px); border-bottom: 1px solid var(--border); width: 100% }
+    .header-top { display: flex; align-items: center; justify-content: space-between; height: 68px; max-width: var(--max); margin-inline: auto; padding-inline: var(--px); gap: 10px }
+    .h-social { display: flex; gap: 14px; align-items: center; flex-shrink: 0 }
+    .h-social a { color: var(--muted); transition: color .2s; display: flex }
+    .h-social a:hover { color: var(--gold) }
+    .h-social svg { width: 13px; height: 13px }
+    .logo { flex: 1; text-align: center; cursor: pointer; min-width: 0 }
+    .logo-name { font-family: var(--fw-label); font-size: 19px; letter-spacing: 4px; color: var(--gold); display: block; line-height: 1.1 }
+    .logo-sub { font-family: var(--fw-ui); font-size: 8.5px; letter-spacing: 3.5px; color: var(--champ-muted); text-transform: uppercase; display: block; margin-top: 2px }
+    .h-actions { display: flex; align-items: center; gap: 18px; flex-shrink: 0 }
+    .h-actions a { color: var(--champ-muted); font-size: 12px; transition: color .2s; display: flex; align-items: center; gap: 5px }
+    .h-actions a:hover { color: var(--gold) }
+    .h-actions svg { width: 15px; height: 15px }
+    .cart-wrap { position: relative }
+    .cart-badge { position: absolute; top: -7px; right: -8px; background: var(--gold); color: var(--obsidian); font-size: 8px; font-weight: 700; width: 15px; height: 15px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--fw-label) }
+    .main-nav { border-top: 1px solid var(--border); max-width: var(--max); margin-inline: auto; padding-inline: var(--px); display: flex; justify-content: center; align-items: stretch }
+    .nav-item { position: relative; display: flex; flex-shrink: 0 }
+    .nav-link { display: flex; align-items: center; gap: 5px; padding: 13px 15px; font-family: var(--fw-label); font-size: 9.5px; letter-spacing: 2.2px; color: var(--champ-muted); text-transform: uppercase; transition: color .2s; white-space: nowrap; border-bottom: 2px solid transparent }
+    .nav-link:hover, .nav-link.active { color: var(--gold); border-bottom-color: var(--gold) }
+
+    .page-hero { position: relative; padding: clamp(80px,12vw,140px) 0 clamp(60px,8vw,100px); overflow: hidden; text-align: center }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(201,168,76,.08) 0%, transparent 70%) }
+    .page-hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(201,168,76,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,.025) 1px, transparent 1px); background-size: 72px 72px }
+    .page-hero-content { position: relative; z-index: 2 }
+    .page-hero-eyebrow { font-family: var(--fw-label); font-size: 9.5px; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 20px }
+    .page-hero-eyebrow::before, .page-hero-eyebrow::after { content: ''; width: 36px; height: 1px; background: var(--gold) }
+    .page-hero h1 { font-family: var(--fw-display); font-size: clamp(44px,6vw,82px); font-weight: 300; color: var(--cream); line-height: 1.05; margin-bottom: 20px }
+    .page-hero h1 em { font-style: italic; color: var(--gold) }
+    .page-hero-desc { font-size: 13px; color: var(--muted); line-height: 1.85; max-width: 520px; margin: 0 auto }
+
+    /* POLICY LAYOUT */
+    .policy-layout { display: grid; grid-template-columns: 260px 1fr; gap: 3px; align-items: start }
+    
+    /* SIDEBAR TOC */
+    .policy-sidebar { position: sticky; top: 120px }
+    .toc-card { background: var(--surface-2); border: 1px solid var(--border); padding: 24px }
+    .toc-title { font-family: var(--fw-label); font-size: 8px; letter-spacing: 2.5px; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border) }
+    .toc-link { display: flex; align-items: center; gap: 10px; padding: 9px 0; font-size: 11.5px; color: var(--muted); border-bottom: 1px solid rgba(201,168,76,.06); transition: color .2s; cursor: pointer }
+    .toc-link:last-child { border-bottom: none }
+    .toc-link:hover, .toc-link.active { color: var(--gold) }
+    .toc-link::before { content: ''; width: 4px; height: 4px; background: var(--border-hi); border-radius: 50%; flex-shrink: 0 }
+    .toc-link.active::before { background: var(--gold) }
+    .toc-updated { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 10px; color: var(--muted); line-height: 1.5 }
+    .toc-updated span { color: var(--champ-muted); font-family: var(--fw-label); letter-spacing: 1px; font-size: 9px }
+
+    /* POLICY SECTIONS */
+    .policy-content { background: var(--surface-2); border: 1px solid var(--border) }
+    .policy-section { padding: clamp(36px,5vw,56px) clamp(28px,4vw,48px); border-bottom: 1px solid var(--border) }
+    .policy-section:last-child { border-bottom: none }
+    .policy-section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px }
+    .policy-section-icon { font-size: 28px; flex-shrink: 0 }
+    .policy-section-label { font-family: var(--fw-label); font-size: 8px; letter-spacing: 2.5px; color: var(--gold); text-transform: uppercase; margin-bottom: 4px }
+    .policy-section-title { font-family: var(--fw-display); font-size: clamp(22px,2.5vw,32px); font-weight: 300; color: var(--cream); line-height: 1.2 }
+    .policy-section-title em { font-style: italic; color: var(--gold) }
+    .policy-text { font-size: 12.5px; color: var(--muted); line-height: 1.9; margin-bottom: 16px }
+    .policy-text:last-child { margin-bottom: 0 }
+    .policy-text a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px }
+    .policy-text strong { color: var(--champagne); font-weight: 600 }
+    .policy-h3 { font-family: var(--fw-label); font-size: 9px; letter-spacing: 2px; color: var(--champagne); text-transform: uppercase; margin: 24px 0 10px }
+    .policy-list { margin: 0 0 16px 0 }
+    .policy-list li { display: flex; gap: 10px; margin-bottom: 10px; font-size: 12.5px; color: var(--muted); line-height: 1.7 }
+    .policy-list li::before { content: '✦'; color: var(--gold); font-size: 9px; flex-shrink: 0; margin-top: 3px }
+    .policy-highlight { background: rgba(201,168,76,.05); border: 1px solid var(--border); border-left: 3px solid var(--gold); padding: 16px 20px; margin: 16px 0; font-size: 12px; color: var(--champ-muted); line-height: 1.8 }
+
+    /* POLICY TABS */
+    .policy-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--border); overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; background: var(--surface-2) }
+    .policy-tabs::-webkit-scrollbar { display: none }
+    .policy-tab { padding: 14px 24px; font-family: var(--fw-label); font-size: 8.5px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; background: transparent; border: none; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; flex-shrink: 0; transition: color .2s }
+    .policy-tab.active { color: var(--gold); border-bottom-color: var(--gold) }
+    .policy-tab:hover { color: var(--champ-muted) }
+    .policy-panel { display: none }
+    .policy-panel.active { display: block }
+
+    .site-footer { background: #0C0C0C; border-top: 1px solid var(--border) }
+    .footer-top { max-width: var(--max); margin-inline: auto; padding: clamp(48px,7vw,80px) var(--px) clamp(36px,5vw,60px); display: grid; grid-template-columns: 1.8fr 1fr 1fr 1.4fr; gap: clamp(24px,4vw,60px) }
+    .f-brand .logo-name { font-size: 16px; margin-bottom: 4px; display: block }
+    .f-brand .logo-sub { display: block; margin-bottom: 18px }
+    .f-brand p { font-size: 12px; color: var(--muted); line-height: 1.9; max-width: 260px; margin-bottom: 22px }
+    .f-social { display: flex; gap: 9px; flex-wrap: wrap }
+    .f-social a { width: 34px; height: 34px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 11px; transition: all .2s }
+    .f-social a:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,.07) }
+    .f-col h4 { font-family: var(--fw-label); font-size: 9px; letter-spacing: 2.5px; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border) }
+    .f-col li { margin-bottom: 9px }
+    .f-col a { font-size: 12px; color: var(--muted); letter-spacing: .3px; transition: color .18s; display: flex; align-items: center; gap: 7px }
+    .f-col a::before { content: '—'; font-size: 9px; color: var(--border-hi) }
+    .f-col a:hover { color: var(--champagne) }
+    .f-del p { font-size: 11.5px; color: var(--muted); line-height: 1.8; margin-bottom: 10px }
+    .f-del .hub { font-family: var(--fw-label); font-size: 8.5px; letter-spacing: 1.5px; color: var(--champ-muted); text-transform: uppercase }
+    .footer-bottom { border-top: 1px solid var(--border); padding: 18px var(--px); max-width: var(--max); margin-inline: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px }
+    .footer-bottom p { font-size: 11px; color: var(--muted); letter-spacing: .3px }
+    .pay-badges { display: flex; gap: 8px; flex-wrap: wrap }
+    .pay-b { background: var(--surface-3); border: 1px solid var(--border); padding: 4px 11px; font-family: var(--fw-label); font-size: 8.5px; letter-spacing: 1px; color: var(--champ-muted); text-transform: uppercase }
+    .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 8999; width: 54px; height: 54px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 22px rgba(37,211,102,.45); transition: transform .2s, box-shadow .2s }
+    .wa-float:hover { transform: scale(1.09); box-shadow: 0 8px 30px rgba(37,211,102,.55) }
+    .wa-float svg { width: 27px; height: 27px; fill: #fff }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease }
+    .reveal.visible { opacity: 1; transform: translateY(0) }
+
+    @media(max-width: 900px) {
+      .policy-layout { grid-template-columns: 1fr }
+      .policy-sidebar { position: static }
+      .footer-top { grid-template-columns: 1fr 1fr }
+    }
+    @media(max-width: 600px) {
+      .footer-top { grid-template-columns: 1fr }
+      .footer-bottom { flex-direction: column; text-align: center }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ann-bar">
+    ⚡ Same-Day Delivery Available<span>|</span>Trusted by Overseas Pakistanis — USA · UK · Canada<span>|</span>WhatsApp: 0332-6362390
+  </div>
+
+  <header class="site-header">
+    <div class="header-top">
+      <div class="h-social">
+        <a href="https://www.facebook.com/share/16unJ8ZTiF/" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="https://www.instagram.com/islamabadgiftshop.pk" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://wa.me/923326362390" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+      </div>
+      <a class="logo" href="IGS_Homepage_v2.html">
+        <span class="logo-name">ISLAMABAD GIFTSHOP.PK</span>
+        <span class="logo-sub">Gifts That Express Your Feelings</span>
+      </a>
+      <div class="h-actions">
+        <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span style="font-family:var(--fw-label);font-size:9px;letter-spacing:1px">Account</span></a>
+        <a href="#" class="cart-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-badge">0</span></a>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="nav-item"><a class="nav-link" href="IGS_Homepage_v2.html">Home</a></div>
+      <div class="nav-item"><a class="nav-link" href="IGS_Collection.html">Collections</a></div>
+      <div class="nav-item"><a class="nav-link" href="IGS_About.html">About</a></div>
+      <div class="nav-item"><a class="nav-link" href="IGS_Contact.html">Contact</a></div>
+      <div class="nav-item"><a class="nav-link" href="IGS_FAQ.html">FAQs</a></div>
+      <div class="nav-item"><a class="nav-link active" href="IGS_Policy.html">Policy</a></div>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero bg-0">
+    <div class="page-hero-grid"></div>
+    <div class="wrap page-hero-content">
+      <div class="page-hero-eyebrow">Legal</div>
+      <h1>Our <em>Policies</em></h1>
+      <p class="page-hero-desc">Transparency and trust are the foundation of everything we do. Please read our policies carefully — they govern your use of our services.</p>
+    </div>
+  </section>
+
+  <!-- POLICY SECTION -->
+  <section class="bg-1 gold-rule-top" style="padding: clamp(60px,8vw,100px) 0">
+    <div class="wrap">
+      <div class="policy-layout">
+        <!-- Sidebar TOC -->
+        <div class="policy-sidebar reveal">
+          <div class="toc-card">
+            <div class="toc-title">Table of Contents</div>
+            <div class="toc-link active" onclick="showTab('refund')">Refund & Return Policy</div>
+            <div class="toc-link" onclick="showTab('privacy')">Privacy Policy</div>
+            <div class="toc-link" onclick="showTab('terms')">Terms of Service</div>
+            <div class="toc-link" onclick="showTab('shipping')">Shipping & Delivery Policy</div>
+            <div class="toc-updated">
+              <span>Last Updated</span><br>June 25, 2026
+            </div>
+          </div>
+        </div>
+
+        <!-- Policy Content -->
+        <div class="reveal">
+          <!-- POLICY TABS -->
+          <div class="policy-tabs">
+            <button class="policy-tab active" id="tab-refund" onclick="showTab('refund')">Refund Policy</button>
+            <button class="policy-tab" id="tab-privacy" onclick="showTab('privacy')">Privacy Policy</button>
+            <button class="policy-tab" id="tab-terms" onclick="showTab('terms')">Terms of Service</button>
+            <button class="policy-tab" id="tab-shipping" onclick="showTab('shipping')">Shipping Policy</button>
+          </div>
+
+          <div class="policy-content">
+            <!-- REFUND POLICY -->
+            <div class="policy-panel active" id="panel-refund">
+              <div class="policy-section">
+                <div class="policy-section-header">
+                  <span class="policy-section-icon">🔄</span>
+                  <div>
+                    <div class="policy-section-label">Legal Document</div>
+                    <div class="policy-section-title">Refund & <em>Return Policy</em></div>
+                  </div>
+                </div>
+
+                <div class="policy-highlight">Due to the perishable and personalized nature of our products — including fresh flowers, custom cakes, and personalized gifts — all sales are generally considered final. However, we are committed to your satisfaction and will make it right if something goes wrong.</div>
+
+                <div class="policy-h3">Eligibility for Refunds</div>
+                <p class="policy-text">We will issue a full replacement or refund in the following circumstances:</p>
+                <ul class="policy-list">
+                  <li>The order was delivered significantly damaged or in unacceptable condition</li>
+                  <li>The wrong item was delivered (not matching your order)</li>
+                  <li>The order was not delivered at all and we cannot arrange re-delivery</li>
+                  <li>The product quality was materially different from what was advertised</li>
+                </ul>
+
+                <div class="policy-h3">How to Claim a Refund</div>
+                <p class="policy-text">To initiate a refund or replacement claim:</p>
+                <ul class="policy-list">
+                  <li>Contact us via <a href="https://wa.me/923326362390">WhatsApp at 0332-6362390</a> or email at <a href="mailto:info@islamabadgiftshop.pk">info@islamabadgiftshop.pk</a> within <strong>24 hours</strong> of delivery</li>
+                  <li>Provide your order number and photos clearly showing the issue</li>
+                  <li>Our team will review your claim within 2–4 business hours</li>
+                  <li>If approved, you will receive a replacement within 24 hours or a refund within 3–7 business days</li>
+                </ul>
+
+                <div class="policy-h3">Non-Refundable Items</div>
+                <ul class="policy-list">
+                  <li>Perishable goods (flowers, cakes) where the issue is not due to our fault</li>
+                  <li>Custom or personalized items that were made correctly per your specifications</li>
+                  <li>Orders where delivery was refused by the recipient</li>
+                  <li>Orders where incorrect delivery information was provided by the customer</li>
+                  <li>Orders cancelled after the 2-hour cancellation window</li>
+                </ul>
+
+                <div class="policy-h3">Refund Processing Times</div>
+                <ul class="policy-list">
+                  <li><strong>JazzCash / EasyPaisa:</strong> 1–3 business days</li>
+                  <li><strong>Bank Transfer:</strong> 3–5 business days</li>
+                  <li><strong>Credit / Debit Card:</strong> 5–10 business days (depends on your bank)</li>
+                  <li><strong>International transfers:</strong> 5–10 business days</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- PRIVACY POLICY -->
+            <div class="policy-panel" id="panel-privacy">
+              <div class="policy-section">
+                <div class="policy-section-header">
+                  <span class="policy-section-icon">🔒</span>
+                  <div>
+                    <div class="policy-section-label">Legal Document</div>
+                    <div class="policy-section-title"><em>Privacy</em> Policy</div>
+                  </div>
+                </div>
+
+                <p class="policy-text">This Privacy Policy describes how IslamabadGiftShop.pk ("we", "us", or "our") collects, uses, and shares information about you when you visit our website or use our services. We are committed to protecting your privacy and handling your data responsibly.</p>
+
+                <div class="policy-h3">Information We Collect</div>
+                <ul class="policy-list">
+                  <li><strong>Personal Information:</strong> Name, email address, phone number, delivery address provided when placing an order</li>
+                  <li><strong>Payment Information:</strong> We do not store payment card details. Transactions are processed through secure third-party payment gateways</li>
+                  <li><strong>Usage Data:</strong> Browser type, pages visited, time spent on site, referring URLs (collected anonymously via analytics)</li>
+                  <li><strong>Communications:</strong> Messages you send us via WhatsApp, email, or our contact form</li>
+                </ul>
+
+                <div class="policy-h3">How We Use Your Information</div>
+                <ul class="policy-list">
+                  <li>To process and fulfill your orders</li>
+                  <li>To send order confirmations, delivery updates, and receipts</li>
+                  <li>To respond to your customer service inquiries</li>
+                  <li>To send promotional emails if you have opted in (you can unsubscribe at any time)</li>
+                  <li>To improve our website and services through analytics</li>
+                  <li>To comply with legal obligations</li>
+                </ul>
+
+                <div class="policy-h3">Data Sharing</div>
+                <p class="policy-text">We do not sell, rent, or trade your personal information to third parties. We may share your data with:</p>
+                <ul class="policy-list">
+                  <li>Delivery partners (only the information needed to complete your delivery)</li>
+                  <li>Payment processors (to securely process transactions)</li>
+                  <li>Analytics providers (only anonymized, aggregated data)</li>
+                  <li>Legal authorities when required by law</li>
+                </ul>
+
+                <div class="policy-h3">Data Security</div>
+                <p class="policy-text">We implement industry-standard security measures including SSL encryption, secure server infrastructure, and restricted access to personal data. However, no method of internet transmission is 100% secure, and we cannot guarantee absolute security.</p>
+
+                <div class="policy-h3">Your Rights</div>
+                <ul class="policy-list">
+                  <li>Request access to the personal data we hold about you</li>
+                  <li>Request correction of inaccurate data</li>
+                  <li>Request deletion of your personal data</li>
+                  <li>Opt out of marketing communications at any time</li>
+                </ul>
+
+                <p class="policy-text">To exercise any of these rights, contact us at <a href="mailto:info@islamabadgiftshop.pk">info@islamabadgiftshop.pk</a>.</p>
+
+                <div class="policy-h3">Cookies</div>
+                <p class="policy-text">Our website uses cookies to improve your browsing experience, remember your preferences, and gather analytics data. You can control cookie settings through your browser. Disabling cookies may affect some functionality of our website.</p>
+              </div>
+            </div>
+
+            <!-- TERMS OF SERVICE -->
+            <div class="policy-panel" id="panel-terms">
+              <div class="policy-section">
+                <div class="policy-section-header">
+                  <span class="policy-section-icon">📋</span>
+                  <div>
+                    <div class="policy-section-label">Legal Document</div>
+                    <div class="policy-section-title">Terms of <em>Service</em></div>
+                  </div>
+                </div>
+
+                <p class="policy-text">These Terms of Service ("Terms") govern your access to and use of the IslamabadGiftShop.pk website and services. By accessing our website or placing an order, you agree to be bound by these Terms.</p>
+
+                <div class="policy-h3">1. Use of Our Services</div>
+                <ul class="policy-list">
+                  <li>You must be at least 18 years old to place an order or use our services</li>
+                  <li>You are responsible for providing accurate and complete information when placing orders</li>
+                  <li>You agree to use our services only for lawful purposes and in accordance with these Terms</li>
+                  <li>You may not use our services to send inappropriate, offensive, or illegal gifts or messages</li>
+                </ul>
+
+                <div class="policy-h3">2. Orders & Pricing</div>
+                <ul class="policy-list">
+                  <li>All prices are listed in Pakistani Rupees (PKR) unless otherwise stated</li>
+                  <li>Prices may change without notice, but confirmed order prices are honored</li>
+                  <li>We reserve the right to refuse or cancel any order at our discretion</li>
+                  <li>Product availability is subject to change and cannot always be guaranteed</li>
+                </ul>
+
+                <div class="policy-h3">3. Product Representation</div>
+                <p class="policy-text">We strive to represent our products as accurately as possible. However, due to the handcrafted and seasonal nature of floral arrangements and bespoke cakes, the delivered product may vary slightly in color, size, or arrangement from the product images shown. Substitutions of equivalent value may be made when specific items are unavailable, with prior customer notification where possible.</p>
+
+                <div class="policy-h3">4. Intellectual Property</div>
+                <p class="policy-text">All content on our website — including text, images, logos, design, and branding — is the property of IslamabadGiftShop.pk and is protected by Pakistani and international copyright law. You may not reproduce, distribute, or use any of our content without written permission.</p>
+
+                <div class="policy-h3">5. Limitation of Liability</div>
+                <p class="policy-text">To the maximum extent permitted by law, IslamabadGiftShop.pk shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our services, including but not limited to: delivery delays due to extreme weather or force majeure, loss of business opportunity, or emotional distress.</p>
+
+                <div class="policy-h3">6. Changes to Terms</div>
+                <p class="policy-text">We reserve the right to update these Terms at any time. Changes will be effective immediately upon posting to our website. Your continued use of our services after changes are posted constitutes acceptance of the revised Terms.</p>
+
+                <div class="policy-h3">7. Governing Law</div>
+                <p class="policy-text">These Terms are governed by and construed in accordance with the laws of Pakistan. Any disputes shall be resolved in the courts of Islamabad, Pakistan.</p>
+
+                <div class="policy-h3">8. Contact</div>
+                <p class="policy-text">For questions about these Terms, contact us at <a href="mailto:info@islamabadgiftshop.pk">info@islamabadgiftshop.pk</a> or via <a href="https://wa.me/923326362390">WhatsApp at 0332-6362390</a>.</p>
+              </div>
+            </div>
+
+            <!-- SHIPPING POLICY -->
+            <div class="policy-panel" id="panel-shipping">
+              <div class="policy-section">
+                <div class="policy-section-header">
+                  <span class="policy-section-icon">🚚</span>
+                  <div>
+                    <div class="policy-section-label">Legal Document</div>
+                    <div class="policy-section-title">Shipping & <em>Delivery Policy</em></div>
+                  </div>
+                </div>
+
+                <div class="policy-h3">Delivery Areas</div>
+                <p class="policy-text">We deliver across Pakistan with dedicated hubs in:</p>
+                <ul class="policy-list">
+                  <li><strong>Islamabad Hub:</strong> Islamabad, Rawalpindi, Wah Cantt, Haripur, Gujar Khan, Jhelum, Mirpur, Attock</li>
+                  <li><strong>Lahore Hub:</strong> Lahore, Gujranwala, Gujrat, Sialkot, Faisalabad, Multan & across Punjab</li>
+                  <li><strong>Peshawar Hub:</strong> Peshawar, Mardan, Nowshera, Swabi, Charsadda & across KPK</li>
+                  <li><strong>Karachi Hub:</strong> Karachi, Hyderabad, Sukkur & across Sindh</li>
+                </ul>
+
+                <div class="policy-h3">Same-Day Delivery</div>
+                <ul class="policy-list">
+                  <li>Available in Islamabad, Rawalpindi, Lahore, Karachi, and Peshawar</li>
+                  <li>Orders must be placed before <strong>4:00 PM (PKT)</strong> for same-day delivery</li>
+                  <li>Same-day delivery is subject to product and rider availability</li>
+                  <li>Delivery typically occurs between 12:00 PM – 9:00 PM on the same day</li>
+                </ul>
+
+                <div class="policy-h3">Scheduled Delivery</div>
+                <p class="policy-text">You can schedule delivery for a future date up to 30 days in advance. For time-specific delivery requests (e.g., 7:00 PM exactly), please contact us on WhatsApp as this may involve additional coordination.</p>
+
+                <div class="policy-h3">Delivery Charges</div>
+                <ul class="policy-list">
+                  <li>Delivery charges vary by location and are calculated at checkout</li>
+                  <li>Free delivery may be offered during promotional periods</li>
+                  <li>Rush delivery (within 2 hours) may incur additional fees</li>
+                  <li>Remote or outstation areas may have higher delivery fees</li>
+                </ul>
+
+                <div class="policy-h3">Delivery Confirmation</div>
+                <p class="policy-text">Upon successful delivery, we will send you a WhatsApp notification with photo confirmation. If the recipient is unavailable at the time of delivery, our rider will contact both the recipient and sender to arrange an alternative.</p>
+
+                <div class="policy-h3">Failed Deliveries</div>
+                <p class="policy-text">If a delivery fails due to:</p>
+                <ul class="policy-list">
+                  <li>Incorrect address provided by the customer — re-delivery charges apply</li>
+                  <li>Recipient unavailable and unreachable — we will hold the order for 2 hours then contact you</li>
+                  <li>Delivery refused by recipient — no refund is applicable</li>
+                  <li>Our fault (e.g., rider error) — we will redeliver free of charge or issue a full refund</li>
+                </ul>
+
+                <div class="policy-h3">International Orders</div>
+                <p class="policy-text">We accept orders from customers worldwide. All gifts are delivered within Pakistan only — we do not ship internationally. For overseas customers, payment can be made via bank transfer, Western Union, or other international remittance services. Contact us for overseas customer support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="f-brand">
+        <span class="logo-name">ISLAMABAD GIFTSHOP.PK</span>
+        <span class="logo-sub">Gifts That Express Your Feelings</span>
+        <p>Pakistan's leading luxury gifting brand. Trusted by overseas Pakistanis worldwide to deliver joy, love, and celebration to their loved ones back home.</p>
+        <div class="f-social">
+          <a href="https://www.facebook.com/share/16unJ8ZTiF/">f</a>
+          <a href="https://www.instagram.com/islamabadgiftshop.pk">ig</a>
+          <a href="https://youtube.com/@islamabadgiftshop">yt</a>
+          <a href="https://wa.me/923326362390">wa</a>
+          <a href="https://pk.linkedin.com/in/islamabad-giftshop-pk-896905312">in</a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="IGS_Homepage_v2.html">Home</a></li>
+          <li><a href="IGS_About.html">About Us</a></li>
+          <li><a href="IGS_Contact.html">Contact</a></li>
+          <li><a href="IGS_FAQ.html">FAQs</a></li>
+          <li><a href="IGS_Policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="https://islamabadgiftshop.pk/collections/flowers">Luxury Flowers</a></li>
+          <li><a href="https://islamabadgiftshop.pk/collections/cakes">Custom Cakes</a></li>
+          <li><a href="https://islamabadgiftshop.pk/collections/combos">Gift Combos</a></li>
+          <li><a href="https://islamabadgiftshop.pk/collections/teddy-bear">Teddy Bears</a></li>
+          <li><a href="https://islamabadgiftshop.pk/collections/money-bouquet">Money Bouquets</a></li>
+        </ul>
+      </div>
+      <div class="f-col f-del">
+        <h4>Delivery Coverage</h4>
+        <p><span class="hub">Islamabad Hub —</span><br>Rawalpindi, Wah Cantt, Haripur</p>
+        <p><span class="hub">Lahore Hub —</span><br>Gujranwala, Sialkot, Faisalabad</p>
+        <p><span class="hub">Peshawar Hub —</span><br>Mardan, Nowshera & KPK</p>
+        <p><span class="hub">Karachi Hub —</span><br>Hyderabad & across Sindh</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 IslamabadGiftShop.pk — All rights reserved.</p>
+      <div class="pay-badges">
+        <span class="pay-b">JazzCash</span><span class="pay-b">EasyPaisa</span><span class="pay-b">Bank Transfer</span><span class="pay-b">Visa / MC</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/923326362390" class="wa-float" title="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+
+  <script>
+    function showTab(name) {
+      document.querySelectorAll('.policy-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.policy-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.toc-link').forEach(l => l.classList.remove('active'));
+      const tab = document.getElementById('tab-' + name);
+      const panel = document.getElementById('panel-' + name);
+      if (tab) tab.classList.add('active');
+      if (panel) panel.classList.add('active');
+      // Highlight the TOC link
+      document.querySelectorAll('.toc-link').forEach(l => {
+        if (l.getAttribute('onclick')?.includes(name)) l.classList.add('active');
+      });
+    }
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    window.addEventListener('scroll', () => {
+      const h = document.querySelector('.site-header');
+      h.style.boxShadow = window.scrollY > 60 ? '0 4px 40px rgba(0,0,0,.65)' : 'none';
+    }, { passive: true });
+  </script>
+</body>
+</html>

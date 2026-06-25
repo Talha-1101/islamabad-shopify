@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customize Your Order — IslamabadGiftShop.pk</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --obsidian: #080808;
+  --card-dark: #161616;
+  --card-elevated: #1e1e1e;
+  --gold: #C9A84C;
+  --gold-bright: #E4C06E;
+  --champagne: #E8D5A3;
+  --champagne-muted: #C4B08A;
+  --cream: #F5F0E8;
+  --muted: #6B6B6B;
+  --border: rgba(201,168,76,0.2);
+  --border-bright: rgba(201,168,76,0.5);
+  --font-display: 'Cormorant Garamond', serif;
+  --font-ui: 'Montserrat', sans-serif;
+  --font-label: 'Cinzel', serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--obsidian); color: var(--cream); font-family: var(--font-ui); font-size: 15px; line-height: 1.6; overflow-x: hidden; }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+button { border: none; cursor: pointer; font-family: inherit; }
+
+/* HEADER */
+.announcement-bar { background: var(--gold); color: var(--obsidian); text-align: center; padding: 10px 20px; font-family: var(--font-label); font-size: 11px; letter-spacing: 2.5px; font-weight: 600; text-transform: uppercase; }
+.announcement-bar span { margin: 0 16px; opacity: 0.5; }
+.site-header { background: rgba(8,8,8,0.97); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 72px; max-width: 1440px; margin: 0 auto; }
+.logo-mark { font-family: var(--font-label); font-size: 20px; font-weight: 600; letter-spacing: 4px; color: var(--gold); display: block; line-height: 1.1; text-align:center; }
+.logo-tagline { font-family: var(--font-ui); font-size: 9px; letter-spacing: 3.5px; color: var(--champagne-muted); text-transform: uppercase; display: block; margin-top: 2px; text-align:center; }
+
+.main-nav { border-top: 1px solid var(--border); max-width: 1440px; margin: 0 auto; padding: 0 48px; display: flex; align-items: center; justify-content: center; }
+.nav-link { display: block; padding: 14px 18px; font-family: var(--font-label); font-size: 10px; letter-spacing: 2.5px; color: var(--champagne-muted); text-transform: uppercase; transition: color 0.2s; }
+.nav-link:hover, .nav-link.active { color: var(--gold); }
+
+/* PAGE HERO */
+.page-hero {
+  position: relative;
+  padding: 100px 48px 80px;
+  text-align: center;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.1) 0%, transparent 60%);
+}
+.hero-label { font-family: var(--font-label); font-size: 10px; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; position: relative; }
+.hero-title { font-family: var(--font-display); font-size: clamp(44px, 5vw, 72px); font-weight: 300; color: var(--cream); line-height: 1.1; margin-bottom: 20px; position: relative; }
+.hero-title em { font-style: italic; color: var(--gold); }
+.hero-desc { font-size: 13px; color: var(--muted); max-width: 480px; margin: 0 auto; line-height: 1.8; position: relative; }
+
+/* STEP PROGRESS */
+.step-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 36px 48px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--card-dark);
+  max-width: 100%;
+}
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+.step-connector {
+  width: 80px;
+  height: 1px;
+  background: var(--border);
+  margin: 0 8px;
+}
+.step-connector.done { background: linear-gradient(90deg, var(--gold), var(--border)); }
+.step-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-label);
+  font-size: 11px;
+  color: var(--muted);
+  background: var(--obsidian);
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+.step-item.active .step-num { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.1); }
+.step-item.done .step-num { border-color: var(--gold); background: var(--gold); color: var(--obsidian); }
+.step-label {
+  font-family: var(--font-label);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.step-item.active .step-label { color: var(--gold); }
+.step-item.done .step-label { color: var(--champagne-muted); }
+
+/* BUILDER LAYOUT */
+.builder-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 70vh;
+}
+
+/* LEFT: Steps */
+.builder-steps {
+  border-right: 1px solid var(--border);
+  padding: 60px 56px 60px 48px;
+}
+
+/* Step Block */
+.step-block {
+  margin-bottom: 56px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--border);
+}
+.step-block:last-child { border-bottom: none; margin-bottom: 0; }
+
+.step-block-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.step-block-num {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-label);
+  font-size: 11px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.step-block-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--cream);
+}
+.step-block-title em { font-style: italic; color: var(--gold); }
+.step-block-sub { font-size: 12px; color: var(--muted); margin-left: auto; font-style: italic; }
+
+/* Category selector grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.cat-option {
+  border: 1px solid var(--border);
+  padding: 20px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s;
+  background: var(--card-dark);
+}
+.cat-option:hover { border-color: var(--border-bright); background: var(--card-elevated); }
+.cat-option.selected { border-color: var(--gold); background: rgba(201,168,76,0.08); }
+.cat-option .cat-emoji { font-size: 28px; margin-bottom: 10px; display: block; }
+.cat-option .cat-name { font-family: var(--font-label); font-size: 8px; letter-spacing: 2px; color: var(--champagne-muted); text-transform: uppercase; }
+.cat-option.selected .cat-name { color: var(--gold); }
+
+/* Item cards (for product picking) */
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.item-card {
+  border: 1px solid var(--border);
+  background: var(--card-dark);
+  cursor: pointer;
+  transition: all 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+.item-card:hover { border-color: var(--border-bright); }
+.item-card.selected { border-color: var(--gold); }
+.item-card.selected::after {
+  content: '✓';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  background: var(--gold);
+  color: var(--obsidian);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  z-index: 3;
+  font-family: var(--font-ui);
+}
+.item-img {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--card-elevated);
+}
+.item-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.item-card:hover .item-img img { transform: scale(1.05); }
+.item-info { padding: 12px; }
+.item-name { font-family: var(--font-display); font-size: 14px; color: var(--champagne); margin-bottom: 4px; line-height: 1.3; }
+.item-price { font-family: var(--font-label); font-size: 10px; color: var(--gold); letter-spacing: 1px; }
+
+/* Packaging options */
+.pkg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.pkg-option {
+  border: 1px solid var(--border);
+  padding: 24px 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s;
+  background: var(--card-dark);
+  position: relative;
+}
+.pkg-option:hover { border-color: var(--border-bright); }
+.pkg-option.selected { border-color: var(--gold); background: rgba(201,168,76,0.06); }
+.pkg-option.popular::before {
+  content: 'Most Popular';
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--obsidian);
+  font-family: var(--font-label);
+  font-size: 7px;
+  letter-spacing: 1.5px;
+  padding: 3px 10px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.pkg-icon { font-size: 30px; margin-bottom: 12px; }
+.pkg-name { font-family: var(--font-label); font-size: 9px; letter-spacing: 2px; color: var(--champagne); text-transform: uppercase; margin-bottom: 6px; }
+.pkg-desc { font-size: 11px; color: var(--muted); line-height: 1.5; margin-bottom: 10px; }
+.pkg-price { font-family: var(--font-label); font-size: 11px; color: var(--gold); letter-spacing: 1px; }
+
+/* Add-ons */
+.addon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.addon-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--border);
+  padding: 16px 18px;
+  cursor: pointer;
+  transition: all 0.25s;
+  background: var(--card-dark);
+}
+.addon-option:hover { border-color: var(--border-bright); }
+.addon-option.selected { border-color: var(--gold); background: rgba(201,168,76,0.06); }
+.addon-check {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border-bright);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.addon-option.selected .addon-check { background: var(--gold); border-color: var(--gold); }
+.addon-check-inner { width: 8px; height: 8px; background: var(--obsidian); display: none; }
+.addon-option.selected .addon-check-inner { display: block; }
+.addon-icon { font-size: 20px; }
+.addon-text h4 { font-family: var(--font-label); font-size: 9px; letter-spacing: 1.5px; color: var(--champagne); text-transform: uppercase; margin-bottom: 2px; }
+.addon-text p { font-size: 11px; color: var(--muted); }
+.addon-price { font-family: var(--font-label); font-size: 10px; color: var(--gold); margin-left: auto; letter-spacing: 1px; white-space: nowrap; }
+
+/* Personal message */
+.message-box {
+  background: var(--card-dark);
+  border: 1px solid var(--border);
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.message-box::before {
+  content: '"';
+  position: absolute;
+  right: 12px;
+  top: -8px;
+  font-family: var(--font-display);
+  font-size: 120px;
+  color: rgba(201,168,76,0.05);
+  line-height: 1;
+  font-style: italic;
+}
+.msg-label { font-family: var(--font-label); font-size: 9px; letter-spacing: 2.5px; color: var(--gold); text-transform: uppercase; margin-bottom: 4px; }
+.msg-hint { font-size: 11px; color: var(--muted); margin-bottom: 14px; font-style: italic; }
+.msg-textarea {
+  width: 100%;
+  background: var(--card-elevated);
+  border: 1px solid var(--border);
+  color: var(--cream);
+  padding: 14px 16px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  outline: none;
+  resize: vertical;
+  min-height: 90px;
+  line-height: 1.6;
+  transition: border-color 0.2s;
+}
+.msg-textarea:focus { border-color: var(--gold); }
+.msg-textarea::placeholder { color: var(--muted); font-style: italic; font-size: 12px; }
+
+/* RIGHT: Order Summary */
+.order-summary {
+  background: var(--card-dark);
+  border-left: 1px solid var(--border);
+  padding: 48px 36px;
+  position: sticky;
+  top: 120px;
+  height: fit-content;
+}
+.summary-title {
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.summary-preview {
+  text-align: center;
+  padding: 28px 20px;
+  background: var(--obsidian);
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.preview-placeholder {
+  font-family: var(--font-display);
+  font-size: 52px;
+  color: rgba(201,168,76,0.1);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.preview-text {
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+}
+.preview-items-visual {
+  display: none;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+.preview-item-chip {
+  background: var(--card-elevated);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  font-size: 10px;
+  color: var(--champagne-muted);
+  font-family: var(--font-label);
+  letter-spacing: 1px;
+}
+
+.summary-items { margin-bottom: 20px; }
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+}
+.summary-line:last-child { border-bottom: none; }
+.summary-item-name { color: var(--champagne-muted); flex: 1; line-height: 1.4; }
+.summary-item-price { color: var(--gold); font-family: var(--font-label); font-size: 11px; letter-spacing: 1px; white-space: nowrap; margin-left: 8px; }
+.summary-remove { color: var(--muted); font-size: 10px; cursor: pointer; margin-left: 8px; transition: color 0.2s; }
+.summary-remove:hover { color: #ff6b6b; }
+
+.summary-total-row {
+  background: var(--obsidian);
+  border: 1px solid var(--border-bright);
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+.total-label { font-family: var(--font-label); font-size: 9px; letter-spacing: 2px; color: var(--champagne-muted); text-transform: uppercase; }
+.total-price { font-family: var(--font-label); font-size: 20px; color: var(--gold); letter-spacing: 2px; }
+
+.btn-primary {
+  width: 100%;
+  background: var(--gold);
+  color: var(--obsidian);
+  padding: 16px;
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 10px;
+}
+.btn-primary:hover { background: var(--gold-bright); box-shadow: 0 8px 32px rgba(201,168,76,0.3); }
+
+.btn-wa {
+  width: 100%;
+  background: #25D366;
+  color: white;
+  padding: 14px;
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 20px;
+}
+.btn-wa:hover { background: #20b858; }
+
+.summary-note {
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* FOOTER */
+.site-footer { background: #111; border-top: 1px solid var(--border); }
+.footer-bottom { border-top: 1px solid var(--border); padding: 24px 48px; max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer-bottom p { font-size: 11px; color: var(--muted); }
+.payment-badge { background: var(--card-elevated); border: 1px solid var(--border); padding: 5px 12px; font-family: var(--font-label); font-size: 9px; letter-spacing: 1px; color: var(--champagne-muted); text-transform: uppercase; margin-left: 8px; }
+
+.whatsapp-float { position: fixed; bottom: 32px; right: 32px; z-index: 999; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 24px rgba(37,211,102,0.4); transition: transform 0.2s; }
+.whatsapp-float:hover { transform: scale(1.08); }
+.whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+
+</style>
+</head>
+<body>
+
+<div class="announcement-bar">
+  Build Your Perfect Gift Bundle — Fully Customized & Delivered Same Day<span>|</span>0332-6362390
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div style="width:80px;"></div>
+    <a href="index.html" style="flex:1; text-align:center;">
+      <span class="logo-mark">ISLAMABAD GIFTSHOP.PK</span>
+      <span class="logo-tagline">Gifts That Express Your Feelings</span>
+    </a>
+    <div style="width:80px; display:flex; justify-content:flex-end;">
+      <a href="#" style="color:var(--champagne-muted); font-size:12px; font-family:var(--font-label); letter-spacing:1px; display:flex; align-items:center; gap:6px;">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Cart (0)
+      </a>
+    </div>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="#" class="nav-link">Flowers</a>
+    <a href="#" class="nav-link">Occasions</a>
+    <a href="#" class="nav-link">Cakes</a>
+    <a href="customize.html" class="nav-link active">Customize</a>
+    <a href="#" class="nav-link">Contact</a>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="hero-label">Design Your Perfect Gift</div>
+  <h1 class="hero-title">Customize Your<br><em>Gift Bundle</em></h1>
+  <p class="hero-desc">Build a one-of-a-kind luxury gift experience. Choose your flowers, treats, packaging & personal message — we'll craft and deliver it beautifully.</p>
+</div>
+
+<!-- STEP PROGRESS -->
+<div class="step-progress">
+  <div class="step-item active">
+    <div class="step-num">01</div>
+    <div class="step-label">Choose Category</div>
+  </div>
+  <div class="step-connector"></div>
+  <div class="step-item">
+    <div class="step-num">02</div>
+    <div class="step-label">Select Items</div>
+  </div>
+  <div class="step-connector"></div>
+  <div class="step-item">
+    <div class="step-num">03</div>
+    <div class="step-label">Add-Ons</div>
+  </div>
+  <div class="step-connector"></div>
+  <div class="step-item">
+    <div class="step-num">04</div>
+    <div class="step-label">Packaging</div>
+  </div>
+  <div class="step-connector"></div>
+  <div class="step-item">
+    <div class="step-num">05</div>
+    <div class="step-label">Your Message</div>
+  </div>
+</div>
+
+<!-- BUILDER -->
+<div class="builder-layout">
+
+  <!-- LEFT: Steps -->
+  <div class="builder-steps">
+
+    <!-- STEP 1: Category -->
+    <div class="step-block">
+      <div class="step-block-header">
+        <div class="step-block-num">01</div>
+        <div>
+          <div class="step-block-title">What's the <em>Occasion?</em></div>
+        </div>
+        <div class="step-block-sub">Select one</div>
+      </div>
+      <div class="category-grid">
+        <div class="cat-option selected" onclick="toggleCat(this)">
+          <span class="cat-emoji">💝</span>
+          <div class="cat-name">Anniversary</div>
+        </div>
+        <div class="cat-option" onclick="toggleCat(this)">
+          <span class="cat-emoji">🎂</span>
+          <div class="cat-name">Birthday</div>
+        </div>
+        <div class="cat-option" onclick="toggleCat(this)">
+          <span class="cat-emoji">💒</span>
+          <div class="cat-name">Wedding</div>
+        </div>
+        <div class="cat-option" onclick="toggleCat(this)">
+          <span class="cat-emoji">🌸</span>
+          <div class="cat-name">Mother's Day</div>
+        </div>
+        <div class="cat-option" onclick="toggleCat(this)">
+          <span class="cat-emoji">🎓</span>
+          <div class="cat-name">Graduation</div>
+        </div>
+        <div class="cat-option" onclick="toggleCat(this)">
+          <span class="cat-emoji">🕌</span>
+          <div class="cat-name">Eid Gifts</div>
+        </div>
+        <div class="cat-option" onclick="toggleCat(this)">
+          <span class="cat-emoji">💐</span>
+          <div class="cat-name">Just Because</div>
+        </div>
+        <div class="cat-option" onclick="toggleCat(this)">
+          <span class="cat-emoji">🌟</span>
+          <div class="cat-name">Surprise</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2: Select Items -->
+    <div class="step-block">
+      <div class="step-block-header">
+        <div class="step-block-num">02</div>
+        <div>
+          <div class="step-block-title">Choose Your <em>Gifts</em></div>
+        </div>
+        <div class="step-block-sub">Select up to 4 items</div>
+      </div>
+      <div class="item-grid">
+        <div class="item-card selected" onclick="toggleItem(this, 'Premium Red Roses Bouquet', 10500)">
+          <div class="item-img">
+            <img src="https://islamabadgiftshop.pk/cdn/shop/files/vv17_ed54ad3e-c0ef-4ab1-a0e5-1ecbe1455147.jpg?v=1766068156" alt="Red Roses">
+          </div>
+          <div class="item-info">
+            <div class="item-name">Premium Red Roses Bouquet</div>
+            <div class="item-price">Rs. 10,500</div>
+          </div>
+        </div>
+        <div class="item-card" onclick="toggleItem(this, 'Turkish Chocolate Cake', 4500)">
+          <div class="item-img">
+            <img src="https://islamabadgiftshop.pk/cdn/shop/files/Turkish-Chocolate-Cake-qwtzq8of4xig9agtrtmk68pf3y8p81v9kj6klab7go.jpg?v=1737971133" alt="Chocolate Cake">
+          </div>
+          <div class="item-info">
+            <div class="item-name">Turkish Chocolate Cake</div>
+            <div class="item-price">Rs. 4,500</div>
+          </div>
+        </div>
+        <div class="item-card" onclick="toggleItem(this, '3ft Pink Teddy Bear', 8500)">
+          <div class="item-img">
+            <img src="https://islamabadgiftshop.pk/cdn/shop/files/affordable_44.png?v=1739203646" alt="Teddy Bear">
+          </div>
+          <div class="item-info">
+            <div class="item-name">Premium 3ft Pink Teddy Bear</div>
+            <div class="item-price">Rs. 8,500</div>
+          </div>
+        </div>
+        <div class="item-card" onclick="toggleItem(this, 'Ferrero Rocher Box', 6500)">
+          <div class="item-img">
+            <img src="https://islamabadgiftshop.pk/cdn/shop/files/b165.webp?v=1736422509" alt="Ferrero Rocher">
+          </div>
+          <div class="item-info">
+            <div class="item-name">Ferrero Rocher 24-Box</div>
+            <div class="item-price">Rs. 6,500</div>
+          </div>
+        </div>
+        <div class="item-card" onclick="toggleItem(this, 'White Lily Arrangement', 9000)">
+          <div class="item-img">
+            <img src="https://islamabadgiftshop.pk/cdn/shop/files/new_37.png?v=1756061267" alt="White Lily">
+          </div>
+          <div class="item-info">
+            <div class="item-name">Stunning White Lily Arrangement</div>
+            <div class="item-price">Rs. 9,000</div>
+          </div>
+        </div>
+        <div class="item-card" onclick="toggleItem(this, 'Red Velvet Cake', 3200)">
+          <div class="item-img">
+            <img src="https://islamabadgiftshop.pk/cdn/shop/files/Red-Velvet-pgtfyyk6xhe65coo8lw8t565c7ao96nw0ittufdpc8.jpg?v=1737970619" alt="Red Velvet Cake">
+          </div>
+          <div class="item-info">
+            <div class="item-name">Red Velvet Cake</div>
+            <div class="item-price">Rs. 3,200</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3: Packaging -->
+    <div class="step-block">
+      <div class="step-block-header">
+        <div class="step-block-num">03</div>
+        <div>
+          <div class="step-block-title">Select <em>Packaging</em></div>
+        </div>
+        <div class="step-block-sub">Choose your presentation</div>
+      </div>
+      <div class="pkg-grid">
+        <div class="pkg-option" onclick="selectPkg(this, 0)">
+          <div class="pkg-icon">🎀</div>
+          <div class="pkg-name">Classic Wrap</div>
+          <div class="pkg-desc">Premium tissue paper & ribbon bow</div>
+          <div class="pkg-price">Included</div>
+        </div>
+        <div class="pkg-option popular selected" onclick="selectPkg(this, 500)">
+          <div class="pkg-icon">🎁</div>
+          <div class="pkg-name">Luxury Box</div>
+          <div class="pkg-desc">Rigid gift box with gold foil & ribbon</div>
+          <div class="pkg-price">+ Rs. 500</div>
+        </div>
+        <div class="pkg-option" onclick="selectPkg(this, 1200)">
+          <div class="pkg-icon">💎</div>
+          <div class="pkg-name">Signature Bundle</div>
+          <div class="pkg-desc">Acrylic box, custom balloon bouquet & sash</div>
+          <div class="pkg-price">+ Rs. 1,200</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 4: Add-Ons -->
+    <div class="step-block">
+      <div class="step-block-header">
+        <div class="step-block-num">04</div>
+        <div>
+          <div class="step-block-title">Elevate <em>the Moment</em></div>
+        </div>
+        <div class="step-block-sub">Optional add-ons</div>
+      </div>
+      <div class="addon-grid">
+        <div class="addon-option selected" onclick="toggleAddon(this, 'Heart Balloons (x5)', 800)">
+          <div class="addon-check"><div class="addon-check-inner"></div></div>
+          <div class="addon-icon">🎈</div>
+          <div class="addon-text">
+            <h4>Heart Balloons</h4>
+            <p>5 premium foil balloons</p>
+          </div>
+          <div class="addon-price">+ Rs. 800</div>
+        </div>
+        <div class="addon-option" onclick="toggleAddon(this, 'Lindt Lindor Box', 1560)">
+          <div class="addon-check"><div class="addon-check-inner"></div></div>
+          <div class="addon-icon">🍫</div>
+          <div class="addon-text">
+            <h4>Lindor Chocolates</h4>
+            <p>Lindt Lindor assorted box</p>
+          </div>
+          <div class="addon-price">+ Rs. 1,560</div>
+        </div>
+        <div class="addon-option" onclick="toggleAddon(this, 'Rose Petals Scatter', 500)">
+          <div class="addon-check"><div class="addon-check-inner"></div></div>
+          <div class="addon-icon">🌹</div>
+          <div class="addon-text">
+            <h4>Rose Petals</h4>
+            <p>Scatter of fresh rose petals</p>
+          </div>
+          <div class="addon-price">+ Rs. 500</div>
+        </div>
+        <div class="addon-option" onclick="toggleAddon(this, 'Custom Printed Photo', 1000)">
+          <div class="addon-check"><div class="addon-check-inner"></div></div>
+          <div class="addon-icon">📸</div>
+          <div class="addon-text">
+            <h4>Custom Photo Print</h4>
+            <p>A4 glossy framed print</p>
+          </div>
+          <div class="addon-price">+ Rs. 1,000</div>
+        </div>
+        <div class="addon-option" onclick="toggleAddon(this, 'J. Perfume', 4950)">
+          <div class="addon-check"><div class="addon-check-inner"></div></div>
+          <div class="addon-icon">🌸</div>
+          <div class="addon-text">
+            <h4>J. Perfume</h4>
+            <p>Breeze by J. (50ml)</p>
+          </div>
+          <div class="addon-price">+ Rs. 4,950</div>
+        </div>
+        <div class="addon-option" onclick="toggleAddon(this, 'Video Message QR Card', 750)">
+          <div class="addon-check"><div class="addon-check-inner"></div></div>
+          <div class="addon-icon">📱</div>
+          <div class="addon-text">
+            <h4>Video Message Card</h4>
+            <p>QR code card linking to your video</p>
+          </div>
+          <div class="addon-price">+ Rs. 750</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 5: Message -->
+    <div class="step-block">
+      <div class="step-block-header">
+        <div class="step-block-num">05</div>
+        <div>
+          <div class="step-block-title">Write Your <em>Message</em></div>
+        </div>
+        <div class="step-block-sub">Printed on premium card</div>
+      </div>
+      <div class="message-box">
+        <div class="msg-label">Your Personalized Message Card</div>
+        <div class="msg-hint">This will be printed on a luxury card and included in your gift</div>
+        <textarea class="msg-textarea" id="customMsg" placeholder="e.g. Happy Anniversary, my love. Every day with you is a blessing. You are my forever. 💕" oninput="updateMsg(this)"></textarea>
+        <div style="text-align:right; font-size:10px; color:var(--muted); margin-top:6px; font-family:var(--font-label); letter-spacing:1px;">
+          <span id="msgLen">0</span> / 200
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT: Order Summary -->
+  <div class="order-summary">
+    <div class="summary-title">Your Gift Bundle</div>
+
+    <div class="summary-preview">
+      <div class="preview-placeholder">🎁</div>
+      <div class="preview-text">Your curated bundle<br>will appear here</div>
+    </div>
+
+    <div class="summary-items" id="summaryItems">
+      <div class="summary-line">
+        <span class="summary-item-name">Premium Red Roses Bouquet</span>
+        <span class="summary-item-price">Rs. 10,500</span>
+        <span class="summary-remove" onclick="this.parentElement.remove(); recalc()">✕</span>
+      </div>
+      <div class="summary-line">
+        <span class="summary-item-name">Luxury Box Packaging</span>
+        <span class="summary-item-price">Rs. 500</span>
+      </div>
+      <div class="summary-line">
+        <span class="summary-item-name">Heart Balloons (x5)</span>
+        <span class="summary-item-price">Rs. 800</span>
+        <span class="summary-remove" onclick="this.parentElement.remove(); recalc()">✕</span>
+      </div>
+    </div>
+
+    <div class="summary-total-row">
+      <div class="total-label">Bundle Total</div>
+      <div class="total-price" id="totalPrice">Rs. 11,800</div>
+    </div>
+
+    <button class="btn-primary" onclick="addToCart()">
+      Add Bundle to Cart
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <button class="btn-wa" onclick="window.open('https://wa.me/923326362390?text=I%20want%20to%20order%20a%20custom%20gift%20bundle','_blank')">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      Order via WhatsApp
+    </button>
+
+    <p class="summary-note">
+      Our gifting specialists are available 24/7 to help you create the perfect bundle. Same-day delivery available on orders before 4 PM.
+    </p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-bottom">
+    <p>© 2026 IslamabadGiftShop.pk</p>
+    <div>
+      <span class="payment-badge">JazzCash</span>
+      <span class="payment-badge">EasyPaisa</span>
+      <span class="payment-badge">Visa / MC</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/923326362390" class="whatsapp-float">
+  <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+</a>
+
+<script>
+function toggleCat(el) {
+  document.querySelectorAll('.cat-option').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+function toggleItem(el, name, price) {
+  el.classList.toggle('selected');
+  recalc();
+}
+
+let pkgPrice = 500;
+function selectPkg(el, price) {
+  document.querySelectorAll('.pkg-option').forEach(p => p.classList.remove('selected'));
+  el.classList.add('selected');
+  pkgPrice = price;
+  recalc();
+}
+
+function toggleAddon(el, name, price) {
+  el.classList.toggle('selected');
+  recalc();
+}
+
+function recalc() {
+  // Simple visual recalc
+  const items = document.querySelectorAll('.item-card.selected');
+  const addons = document.querySelectorAll('.addon-option.selected');
+  let total = pkgPrice;
+  // rough calc for demo
+  document.querySelectorAll('.summary-line .summary-item-price').forEach(el => {
+    const val = parseInt(el.textContent.replace(/[^0-9]/g,''));
+    if (!isNaN(val)) total += val;
+  });
+}
+
+function updateMsg(el) {
+  const count = el.value.length;
+  document.getElementById('msgLen').textContent = count;
+  if (count > 200) el.value = el.value.substring(0, 200);
+}
+
+function addToCart() {
+  const btn = event.currentTarget || document.querySelector('.btn-primary');
+  btn.textContent = '✓ Bundle Added!';
+  btn.style.background = '#4CAF50';
+  setTimeout(() => {
+    btn.innerHTML = 'Add Bundle to Cart <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+    btn.style.background = 'var(--gold)';
+  }, 2000);
+}
+</script>
+</body>
+</html>
